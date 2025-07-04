@@ -3,12 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|c:\\users\\\u856D\u5B87\u5B8F\\desktop\\yachts\u5099\u4EFD\\yachts-frontend-website\\yachts\\yachts\\backend\\dealers-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\dealers-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\news.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\news.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|c:\\users\\\u856D\u5B87\u5B8F\\desktop\\yachts\u5099\u4EFD\\yachts-frontend-website\\yachts\\yachts\\dealers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\dealers.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\news-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\news-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\news.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\news.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\newscontent.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\newscontent.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\newscontent.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\newscontent.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\editnews-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\editnews-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\editnews-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\editnews-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\news-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\news-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\addnews.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\addnews.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\addnews.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\addnews.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\site-f.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\site-f.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\dbhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\contact.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +66,188 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dealers-B.aspx",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\Dealers-B.aspx",
-              "RelativeDocumentMoniker": "Yachts\\BackEnd\\Dealers-B.aspx",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\Dealers-B.aspx",
-              "RelativeToolTip": "Yachts\\BackEnd\\Dealers-B.aspx",
+              "DocumentIndex": 13,
+              "Title": "Index.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Index.aspx",
+              "RelativeDocumentMoniker": "Yachts\\Index.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Index.aspx",
+              "RelativeToolTip": "Yachts\\Index.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-29T06:38:04.846Z",
+              "WhenOpened": "2025-07-03T09:24:49.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Contact.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Contact.aspx",
+              "RelativeDocumentMoniker": "Yachts\\Contact.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Contact.aspx",
+              "RelativeToolTip": "Yachts\\Contact.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-07-03T09:23:45.184Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DBHelper.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\DBHelper.cs",
+              "RelativeDocumentMoniker": "Yachts\\DBHelper.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\DBHelper.cs",
+              "RelativeToolTip": "Yachts\\DBHelper.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwEUAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T14:36:37.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Site-F.Master",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Site-F.Master",
+              "RelativeDocumentMoniker": "Yachts\\Site-F.Master",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Site-F.Master",
+              "RelativeToolTip": "Yachts\\Site-F.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-30T10:07:30.31Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NewsContent.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\NewsContent.aspx",
+              "RelativeDocumentMoniker": "Yachts\\NewsContent.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\NewsContent.aspx",
+              "RelativeToolTip": "Yachts\\NewsContent.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-30T13:28:49.249Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "News.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\News.aspx",
+              "RelativeDocumentMoniker": "Yachts\\News.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\News.aspx",
+              "RelativeToolTip": "Yachts\\News.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-29T13:47:07.104Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "NewsContent.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\NewsContent.aspx.cs",
+              "RelativeDocumentMoniker": "Yachts\\NewsContent.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\NewsContent.aspx.cs",
+              "RelativeToolTip": "Yachts\\NewsContent.aspx.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAIA0wB8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T13:34:11.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EditNews-B.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\EditNews-B.aspx.cs",
+              "RelativeDocumentMoniker": "Yachts\\BackEnd\\EditNews-B.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\EditNews-B.aspx.cs",
+              "RelativeToolTip": "Yachts\\BackEnd\\EditNews-B.aspx.cs",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAWwJkAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T07:18:14.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EditNews-B.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\EditNews-B.aspx",
+              "RelativeDocumentMoniker": "Yachts\\BackEnd\\EditNews-B.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\EditNews-B.aspx",
+              "RelativeToolTip": "Yachts\\BackEnd\\EditNews-B.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-30T07:17:57.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddNews.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\AddNews.aspx.cs",
+              "RelativeDocumentMoniker": "Yachts\\BackEnd\\AddNews.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\AddNews.aspx.cs",
+              "RelativeToolTip": "Yachts\\BackEnd\\AddNews.aspx.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAmwHIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:31:51.025Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddNews.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\AddNews.aspx",
+              "RelativeDocumentMoniker": "Yachts\\BackEnd\\AddNews.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\AddNews.aspx",
+              "RelativeToolTip": "Yachts\\BackEnd\\AddNews.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-29T14:27:50.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "News-B.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\News-B.aspx",
+              "RelativeDocumentMoniker": "Yachts\\BackEnd\\News-B.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\News-B.aspx",
+              "RelativeToolTip": "Yachts\\BackEnd\\News-B.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2025-06-29T14:13:59.752Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Dealers.aspx",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Dealers.aspx",
-              "RelativeDocumentMoniker": "Yachts\\Dealers.aspx",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Dealers.aspx",
-              "RelativeToolTip": "Yachts\\Dealers.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-06-29T06:37:27.194Z",
+              "Title": "News-B.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\News-B.aspx.cs",
+              "RelativeDocumentMoniker": "Yachts\\BackEnd\\News-B.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\News-B.aspx.cs",
+              "RelativeToolTip": "Yachts\\BackEnd\\News-B.aspx.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCgAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-29T14:16:04.418Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "News.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\News.aspx.cs",
+              "RelativeDocumentMoniker": "Yachts\\News.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\News.aspx.cs",
+              "RelativeToolTip": "Yachts\\News.aspx.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAWwCoAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T08:34:49.375Z",
               "EditorCaption": ""
             }
           ]
