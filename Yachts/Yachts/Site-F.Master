@@ -1,0 +1,130 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site-F.Master.cs" Inherits="Yachts.FrontEnd.Home" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tayana | Tayana Yachts Official Website</title>
+    <script type="text/javascript" src="Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/jquery.cycle.all.2.74.js"></script>
+    <script type="text/javascript">
+
+        $(function () {
+            // 先取得 #abgne-block-20110111 , 必要參數及輪播間隔
+            var $block = $('#abgne-block-20110111'),
+                timrt, speed = 4000;
+
+            // 幫 #abgne-block-20110111 .title ul li 加上 hover() 事件
+            var $li = $('.title ul li', $block).hover(function () {
+                // 當滑鼠移上時加上 .over 樣式
+                $(this).addClass('over').siblings('.over').removeClass('over');
+            }, function () {
+                // 當滑鼠移出時移除 .over 樣式
+                $(this).removeClass('over');
+            }).click(function () {
+                // 當滑鼠點擊時, 顯示相對應的 div.info
+                // 並加上 .on 樣式
+                var $this = $(this);
+                $this.add($('.bd li.info', $block).eq($this.index())).addClass('on').siblings('.on').removeClass('on');
+            });
+
+            // 幫 $block 加上 hover() 事件
+            $block.hover(function () {
+                // 當滑鼠移上時停止計時器
+                clearTimeout(timer);
+            }, function () {
+                // 當滑鼠移出時啟動計時器
+                var timer = setTimeout(move, speed);
+            });
+
+            // 控制輪播
+            function move() {
+                var _index = $('.title ul li.on', $block).index();
+                _index = (_index + 1) % $li.length;
+                $li.eq(_index).click();
+
+                timer = setTimeout(move, speed);
+            }
+
+            // 啟動計時器
+            timer = setTimeout(move, speed);
+        });
+
+
+        $(document).ready(function () {
+            $('.slideshow').cycle({
+                fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+            });
+        });
+    </script>
+    <!--[if lt IE 7]>
+<script type="text/javascript" src="javascript/iepngfix_tilebg.js"></script>
+<![endif]-->
+    <!--begin:Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"/>
+    <!--end:Bootstrap-->
+    <%--<link href="css/style.css" rel="stylesheet" type="text/css" />--%>
+    <link href="css/reset.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <main>
+            <%--母頁 NavBar 開始--%>
+            <div class="contain">
+                <div class="sub">
+                    <p>
+                        <a href="index.aspx">Home</a>
+                    </p>
+                </div>
+
+                <!--------------------------------選單開始---------------------------------------------------->
+                <div class="menu">
+                    <ul>
+                        <li class="menuli01"><a href="#">Yachts</a></li>
+                        <li class="menuli02"><a href="#">NEWS</a></li>
+                        <li class="menuli03"><a href="Company.aspx">COMPANY</a></li>
+                        <li class="menuli04"><a href="Dealers.aspx">DEALERS</a></li>
+                        <li class="menuli05"><a href="Contact.aspx">CONTACT</a></li>
+                    </ul>
+                </div>
+                <!--------------------------------選單開始結束---------------------------------------------------->
+
+                <%--子頁內容--%>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <!--------------------------------落款開始---------------------------------------------------->
+                <div class="footer">
+                    <p class="footerp01">© 1973-2011 Tayana Yachts, Inc. All Rights Reserved</p>
+                    <div class="footer01">
+                        <span>No. 60, Hai Chien Road, Chung Men Li, Lin Yuan District, Kaohsiung City, Taiwan, R.O.C.</span><br />
+                        <span>TEL：+886(7)641-2721</span> <span>FAX：+886(7)642-3193</span><span><a href="mailto:tayangco@ms15.hinet.net">E-mail：tayangco@ms15.hinet.net</a>.</span>
+                    </div>
+                </div>
+                <!--------------------------------落款結束---------------------------------------------------->
+            </div>
+        </main>
+    </form>
+</body>
+</html>
+<!--
+     FILE ARCHIVED ON 00:46:41 Aug 23, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 02:40:49 Jun 19, 2025.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 0.562
+  exclusion.robots: 0.031
+  exclusion.robots.policy: 0.019
+  esindex: 0.01
+  cdx.remote: 29.835
+  LoadShardBlock: 188.721 (3)
+  PetaboxLoader3.datanode: 191.277 (4)
+  PetaboxLoader3.resolve: 890.574 (2)
+  load_resource: 984.332
+-->
