@@ -25,10 +25,10 @@ namespace Yachts.BackEnd
             string sql = @"select c.Id, c.Name, c.Email, c.Phone, c.Comments, 
                            c.SendedAt,
                            cy.Name AS CountryName,
-                           (RTRIM(b.Name) + ' '+CONVERT(varchar, b.Number)) as DisplayName
+                           (RTRIM(m.Name) + ' '+CONVERT(varchar, m.Number)) as DisplayName
                            from Contact c
                            left Join Country cy on c.CountryId = cy.Id
-                           left join Brochure b on c.BrochureId=b.id 
+                           left join Model m on c.ModelId=m.id 
                            order by c.SendedAt desc
                           ";
             DataTable dt = db.SearchDB(sql);

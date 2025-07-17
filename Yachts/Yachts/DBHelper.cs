@@ -86,5 +86,19 @@ namespace Yachts.Helper
                 }
             }
         }
+
+        public object SearchDBValue(string sql, Dictionary<string, object> parameters)
+        {
+            using (SqlConnection connection = new SqlConnection(WebConfigurationManager.ConnectionStrings["YachtsConnectionString"].ConnectionString))
+            {
+                SqlCommand cmd = new SqlCommand(sql, connection);
+                foreach (var param in parameters)
+                {
+                    cmd.Parameters.AddWithValue(param.Key, param.Value);
+                }
+                connection.Open();
+                return cmd.ExecuteScalar(); // 回傳單一值
+            }
+        }
     }
 }

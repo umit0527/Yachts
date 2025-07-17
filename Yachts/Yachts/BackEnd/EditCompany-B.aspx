@@ -6,7 +6,9 @@
     <div>
         <div class="d-flex">
             <div>
-                種類：<asp:DropDownList ID="CategoryList" runat="server" AutoPostBack="True">
+                標題：<asp:TextBox ID="txtTitle" runat="server" Width="500px"></asp:TextBox>
+                種類：<asp:DropDownList ID="CategoryList" runat="server" AutoPostBack="True"
+                                        OnSelectedIndexChanged="CategoryList_SelectedIndexChanged">
                 </asp:DropDownList>
             </div>
         </div>

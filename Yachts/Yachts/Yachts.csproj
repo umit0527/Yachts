@@ -108,6 +108,8 @@
     <Content Include="BackEnd\AddCountry.aspx" />
     <Content Include="BackEnd\AddDealer.aspx" />
     <Content Include="BackEnd\AddNews.aspx" />
+    <Content Include="BackEnd\AddNewsCategory.aspx" />
+    <Content Include="BackEnd\AddYachts.aspx" />
     <Content Include="BackEnd\CompanyCategory-B.aspx" />
     <Content Include="BackEnd\Company-B.aspx" />
     <Content Include="BackEnd\Contact-B.aspx" />
@@ -118,9 +120,13 @@
     <Content Include="BackEnd\EditCountry-B.aspx" />
     <Content Include="BackEnd\EditDealers-B.aspx" />
     <Content Include="BackEnd\EditNews-B.aspx" />
+    <Content Include="BackEnd\EditNewsCategory-B.aspx" />
+    <Content Include="BackEnd\EditYachts-B.aspx" />
     <Content Include="BackEnd\Index-B.aspx" />
     <Content Include="BackEnd\Login.aspx" />
     <Content Include="BackEnd\News-B.aspx" />
+    <Content Include="BackEnd\NewsCategory-B.aspx" />
+    <Content Include="BackEnd\Yachts-B.aspx" />
     <Content Include="Company.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -186,6 +192,10 @@
     <Content Include="Scripts\ckeditor\ckeditor_php4.php" />
     <Content Include="Scripts\ckeditor\ckeditor.php" />
     <Content Include="Scripts\ckeditor\ckeditor.pack" />
+    <Content Include="Yachts.aspx" />
+    <Content Include="YachtsInterior.aspx" />
+    <Content Include="YachtsLayout.aspx" />
+    <Content Include="YachtsSpecification.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor_source.js" />
     <Content Include="Scripts\ckeditor\config.js" />
@@ -601,6 +611,20 @@
     <Compile Include="BackEnd\AddNews.aspx.designer.cs">
       <DependentUpon>AddNews.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackEnd\AddNewsCategory.aspx.cs">
+      <DependentUpon>AddNewsCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\AddNewsCategory.aspx.designer.cs">
+      <DependentUpon>AddNewsCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\AddYachts.aspx.cs">
+      <DependentUpon>AddYachts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\AddYachts.aspx.designer.cs">
+      <DependentUpon>AddYachts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackEnd\CompanyCategory-B.aspx.cs">
       <DependentUpon>CompanyCategory-B.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -671,6 +695,20 @@
     <Compile Include="BackEnd\EditNews-B.aspx.designer.cs">
       <DependentUpon>EditNews-B.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackEnd\EditNewsCategory-B.aspx.cs">
+      <DependentUpon>EditNewsCategory-B.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\EditNewsCategory-B.aspx.designer.cs">
+      <DependentUpon>EditNewsCategory-B.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\EditYachts-B.aspx.cs">
+      <DependentUpon>EditYachts-B.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\EditYachts-B.aspx.designer.cs">
+      <DependentUpon>EditYachts-B.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackEnd\Index-B.aspx.cs">
       <DependentUpon>Index-B.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -692,12 +730,26 @@
     <Compile Include="BackEnd\News-B.aspx.designer.cs">
       <DependentUpon>News-B.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackEnd\NewsCategory-B.aspx.cs">
+      <DependentUpon>NewsCategory-B.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\NewsCategory-B.aspx.designer.cs">
+      <DependentUpon>NewsCategory-B.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackEnd\Site-B.Master.cs">
       <DependentUpon>Site-B.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BackEnd\Site-B.Master.designer.cs">
       <DependentUpon>Site-B.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\Yachts-B.aspx.cs">
+      <DependentUpon>Yachts-B.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\Yachts-B.aspx.designer.cs">
+      <DependentUpon>Yachts-B.aspx</DependentUpon>
     </Compile>
     <Compile Include="Company.aspx.cs">
       <DependentUpon>Company.aspx</DependentUpon>
@@ -773,6 +825,34 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Yachts.aspx.cs">
+      <DependentUpon>Yachts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yachts.aspx.designer.cs">
+      <DependentUpon>Yachts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YachtsInterior.aspx.cs">
+      <DependentUpon>YachtsInterior.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YachtsInterior.aspx.designer.cs">
+      <DependentUpon>YachtsInterior.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YachtsLayout.aspx.cs">
+      <DependentUpon>YachtsLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YachtsLayout.aspx.designer.cs">
+      <DependentUpon>YachtsLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YachtsSpecification.aspx.cs">
+      <DependentUpon>YachtsSpecification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YachtsSpecification.aspx.designer.cs">
+      <DependentUpon>YachtsSpecification.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

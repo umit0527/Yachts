@@ -28,7 +28,6 @@ namespace Yachts.BackEnd
                 //{
                 //}
                 BindCountryList();
-                //BindCityList(0);  //預設不選擇任何國家
             }
         }
 
@@ -129,7 +128,11 @@ namespace Yachts.BackEnd
                 if (result > 0)
                 {
                     // 提示用戶
-                    Response.Write("<script>alert('成功送出！'); window.location='Dealers-B.aspx';</script>");
+                    Response.Write("<script>alert('新增成功！'); window.location='Dealers-B.aspx';</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('新增失敗，請稍後再試！'); window.location='Dealers-B.aspx';</script>");
                 }
             }
             else

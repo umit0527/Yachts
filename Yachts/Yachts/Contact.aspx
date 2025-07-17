@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site-F.Master" AutoEventWireup="true" CodeBehind="Contact.aspx.cs" Inherits="Yachts.FrontEnd.Contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="/css/homestyle.css" rel="stylesheet" type="text/css" />
+    <link href="/css/homestyle2.css" rel="stylesheet" type="text/css" />
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">

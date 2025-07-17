@@ -32,7 +32,6 @@ namespace Yachts.BackEnd
             }
         }
 
-
         //protected void Button1_Click(object sender, EventArgs e)  //登出
         //{
         //    if (Session["userid"] != null)  //有登入的話，則有登出按鈕
@@ -71,6 +70,7 @@ namespace Yachts.BackEnd
             string categoryList = CategoryList.SelectedValue;
             string title = txtTitle.Text.Trim();
             HttpFileCollection uploadedFiles = Request.Files;
+            bool sticky = chbSticky.Checked;
 
             // 驗證是否有上傳圖片
             if (uploadedFiles.Count == 0 || uploadedFiles[0].ContentLength == 0)
@@ -85,8 +85,8 @@ namespace Yachts.BackEnd
                 return;
             }
 
-                // 處理圖片
-                HttpPostedFile file = uploadedFiles[0]; // 只取第一張圖片
+            // 處理圖片
+            HttpPostedFile file = uploadedFiles[0]; // 只取第一張圖片
             string extension = Path.GetExtension(file.FileName).ToLower();
 
             if (!(extension == ".jpg" || extension == ".jpeg" || extension == ".png" || extension == ".gif"))
@@ -101,8 +101,8 @@ namespace Yachts.BackEnd
             file.SaveAs(savePath);
 
             // 插入新聞相簿資料（含封面路徑）
-            string sqlAlbum = @"INSERT INTO NewsAlbum (CreatedAt, CategoryId, Title, CoverPath, content)
-                                VALUES ( @CreatedAt, @CategoryId, @Title, @CoverPath, @content);
+            string sqlAlbum = @"INSERT INTO News (CreatedAt, CategoryId, Title, CoverPath, content ,Sticky)
+                                VALUES ( @CreatedAt, @CategoryId, @Title, @CoverPath, @content ,@Sticky);
                                ";
 
             var albumParams = new Dictionary<string, object>()
@@ -111,22 +111,22 @@ namespace Yachts.BackEnd
         { "@CategoryId", categoryList },
         { "@Title", title },
         { "@CoverPath", saveFileName },
-        { "@content", content }
+        { "@content", content },
+        { "@Sticky",sticky}
     };
 
             int resultAlbum = db.ExecuteNonQuery(sqlAlbum, albumParams);
-            
+
 
             if (resultAlbum > 0)
             {
-                Response.Write("<script>alert('成功送出！'); window.location='News-B.aspx';</script>");
+                Response.Write("<script>alert('新增送出！'); window.location='News-B.aspx';</script>");
             }
             else
             {
-                Response.Write("<script>alert('送出失敗，請稍後再試。');</script>");
+                Response.Write("<script>alert('新增失敗，請稍後再試！');</script>");
             }
         }
-
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {

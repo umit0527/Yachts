@@ -19,6 +19,22 @@ namespace Yachts
                 BindNewsContent();
                 BindCategory();
 
+                string newsId = Request.QueryString["Id"];
+
+                // 預設導向第一個種類的消息列表
+                if (string.IsNullOrEmpty(newsId))
+                {
+                    // 從資料庫查目前存在的第一筆資料
+                    string sql = @"SELECT TOP 1 Id FROM NewsCategory ORDER BY Id";
+                    DataTable dt = db.SearchDB(sql);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        string defaultId = dt.Rows[0]["Id"].ToString();
+                        Response.Redirect("News.aspx?CategoryId=" + defaultId);
+                        return;
+                    }
+                }
             }
         }
         private void BindNewsContent()  //顯示內容的Repeater

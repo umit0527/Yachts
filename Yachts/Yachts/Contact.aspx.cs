@@ -21,7 +21,7 @@ namespace Yachts.FrontEnd
             if (!IsPostBack)
             {
                 BindCountryList();
-                BindBrochureList();
+                BindModelList();
             }
         }
 
@@ -46,11 +46,11 @@ namespace Yachts.FrontEnd
             }
         }
 
-        private void BindBrochureList()  // "船型"下拉式選單
+        private void BindModelList()  // "船型"下拉式選單
         {
             DBHelper db = new DBHelper();
             string sql = @"select Id, (RTRIM(Name) + ' '+CONVERT(varchar, Number)) as DisplayName
-                           from Brochure 
+                           from Model
                            order by Name desc, Number";
 
             DataTable dt = db.SearchDB(sql);

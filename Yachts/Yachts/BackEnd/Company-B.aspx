@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BackEnd/Site-B.Master" AutoEventWireup="true" CodeBehind="Company-B.aspx.cs" Inherits="Yachts.BackEnd.Company_B" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -7,6 +8,7 @@
     <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
     <ItemTemplate>
         <div style="border: 1px solid #ccc; margin: 5px; padding: 10px;">    
+            <p>標題：<%# Eval("Title") %></p>
             <p>種類：<%# Eval("CategoryName") %></p>
             <p>內容：<%# Eval("content") %></p>
             <p>建立時間：<%# Eval("CreatedAt") %></p>

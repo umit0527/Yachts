@@ -22,11 +22,11 @@ namespace Yachts.BackEnd
         private void BindRepeater()  //顯示Repeater
         {
 
-            string sql = @"select n.CreatedAt, n.Id, n.UpdatedAt, n.Title, n.content,
-                           n.CoverPath 
+            string sql = @"select n.CreatedAt, n.Id, n.UpdatedAt, n.Title, n.content, n.Sticky,
+                           n.CoverPath ,nc.Name as CategoryName
                            from News n 
                            join NewsCategory nc on n.CategoryId =nc.Id
-                           order by nc.Name , n.CreatedAt desc
+                           order by n.Sticky desc, nc.Name , n.CreatedAt desc
                           ";
             DataTable dt = db.SearchDB(sql);
             Repeater1.DataSource = dt;

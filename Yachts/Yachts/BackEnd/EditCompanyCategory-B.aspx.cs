@@ -69,8 +69,12 @@ namespace Yachts.BackEnd
                     int result = db.ExecuteNonQuery(sql, Params);
                     if (result > 0)
                     {
-                        string success = "<script>alert('更新成功'); window.location='CompanyCategory-B.aspx';</script>";
+                        string success = "<script>alert('更新成功！'); window.location='CompanyCategory-B.aspx';</script>";
                         Response.Write(success);
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('新增失敗，請稍後再試！'); window.location='Dealers-B.aspx';</script>");
                     }
                 }
                 else

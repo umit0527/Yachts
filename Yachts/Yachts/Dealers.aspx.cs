@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Yachts.BackEnd;
 using Yachts.Helper;
 
 namespace Yachts.FrontEnd
@@ -21,6 +22,25 @@ namespace Yachts.FrontEnd
                 BindContent();
                 BindCountry();
 
+                string countryId = Request.QueryString["CountryId"];
+
+                // 如果沒有指定經銷商國家，預設導向「國家內有經銷商內容」的第一筆資料
+                if (string.IsNullOrEmpty(countryId))
+                {
+                    // 從資料庫查目前存在的第一筆資料
+                    string sql = @"SELECT TOP 1 c.Id 
+                                   FROM Country c
+                                   JOIN Dealers d ON c.Id = d.CountryId
+                                   ORDER BY c.Id";
+                    DataTable dt = db.SearchDB(sql);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        string defaultId = dt.Rows[0]["Id"].ToString();
+                        Response.Redirect("Dealers.aspx?CountryId=" + defaultId);
+                        return;
+                    }
+                }
             }
         }
         private void BindContent()  //顯示內容的Repeater
@@ -30,12 +50,11 @@ namespace Yachts.FrontEnd
             if (!string.IsNullOrEmpty(countryId))
             {
                 string sql = @"select d.[content], d.CreatedAt , d.Id, d.UpdatedAt,
-                                  Country.Name AS CountryName, City.Name AS CityName
+                                  Country.Name AS CountryName
                            from Dealers d 
                            join Country on d.CountryId =Country.Id
-                           join City on d.CityId=City.Id
                            where d.CountryId = @CountryId
-                           order by CountryName , CityName  ,d.CreatedAt desc
+                           order by CountryName ,d.CreatedAt desc
                           ";
 
                 var param = new Dictionary<string, object> { { "@CountryId", countryId } };

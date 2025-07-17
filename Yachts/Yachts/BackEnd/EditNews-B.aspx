@@ -5,22 +5,24 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div id="content-wrapper">
         <div>
-            <div class="d-flex">
+            <div class="">
                 <div class="">
                     標題：<asp:TextBox ID="txtTitle" runat="server" Width="450px"></asp:TextBox>
-                
-                <div>
-                種類：<asp:DropDownList ID="CategoryList" runat="server" AutoPostBack="True">
-                </asp:DropDownList>
+                    種類：<asp:DropDownList ID="CategoryList" runat="server" AutoPostBack="True">
+                    </asp:DropDownList>
+                    置頂 :
+                    <asp:CheckBox ID="chbSticky" runat="server" RepeatDirection="Horizontal"></asp:CheckBox>
                     <br />
-                    <div>
+                    <br />
+                    <div class="d-flex align-items-center">
                         封面：<asp:FileUpload ID="FileUpload1" runat="server" ClientIDMode="Static" AllowMultiple="true" />
-
-                        <asp:Image ID="imgCover" runat="server" Width="187px" Height="121px" />
+                        <div>
+                            <asp:Image ID="imgCover" runat="server" Width="187px" Height="121px" />
+                        </div>
                     </div>
                 </div>
-                <br />
-            </div></div>
+            </div>
+            <br />
             <ckeditor:CKEditorControl ID="CKEditor1" runat="server" BasePath="~/Scripts/ckeditor/" Height="500px" />
             <asp:Button ID="btnSubmit" runat="server" Text="送 出" OnClick="btnSubmit_Click" />
             &nbsp;&nbsp;&nbsp;

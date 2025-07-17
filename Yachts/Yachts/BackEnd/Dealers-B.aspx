@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/BackEnd/Site-B.Master" AutoEventWireup="true" CodeBehind="Dealers-B.aspx.cs" Inherits="Yachts.BackEnd.Dealers" %>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -10,7 +9,6 @@
         <ItemTemplate>
             <div style="border: 1px solid #ccc; margin: 5px; padding: 10px;">    
                 <p>國家：<%# Eval("CountryName") %></p>
-<%--                <p>城市：<%# Eval("CityName") %></p>--%>
                 <p>內容：<%# Eval("content") %></p>
                 <p>建立時間：<%# Eval("CreatedAt") %></p>
                 <p>修改時間：<%# Eval("UpdatedAt") %></p>

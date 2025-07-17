@@ -147,4 +147,3 @@ C:\Users\蕭宇宏\Desktop\Yachts備份\Yachts-FrontEnd-WebSite\Yachts\Yachts\bi
 C:\Users\蕭宇宏\Desktop\Yachts備份\Yachts-FrontEnd-WebSite\Yachts\Yachts\bin\roslyn\VBCSCompiler.exe
 C:\Users\蕭宇宏\Desktop\Yachts備份\Yachts-FrontEnd-WebSite\Yachts\Yachts\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\蕭宇宏\Desktop\Yachts備份\Yachts-FrontEnd-WebSite\Yachts\Yachts\bin\CKEditor.NET.dll
-C:\Users\蕭宇宏\Desktop\Yachts\Yachts\Yachts\bin\CKEditor.NET.dll

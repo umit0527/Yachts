@@ -22,7 +22,7 @@ namespace Yachts.BackEnd
 
         private void BindRepeater()  //顯示Repeater
         {
-            string sql = @"select c.[content], c.CreatedAt , c.Id, c.UpdatedAt,
+            string sql = @"select c.[content], c.CreatedAt , c.Id, c.UpdatedAt, c.Title,
                                   cc.Name as CategoryName
                            from Company c 
                            join CompanyCategory cc on c.CategoryId =cc.Id

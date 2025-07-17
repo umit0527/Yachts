@@ -54,6 +54,24 @@ namespace Yachts.BackEnd
             {
                 if (!string.IsNullOrWhiteSpace(countryName))
                 {
+                    //檢查編輯後是否有重複，「!=」排除掉自己，檢查自己以外的名稱
+                    string checkSql = @"SELECT COUNT(*) FROM Country 
+                                        WHERE Name = @Name AND Id != @Id";
+
+                    var checkParams = new Dictionary<string, object>
+            {
+                { "@Name", countryName },
+                { "@Id", countryId }
+            };
+
+                    int count = Convert.ToInt32(db.ExecuteScalar(checkSql, checkParams));
+
+                    if (count > 0)
+                    {
+                        Response.Write("<script>alert('已存在相同名稱的國家');</script>");
+                        return;
+                    }
+
                     //先不加入admin
                     string sql = @"update Country set Name=@Name  , 
                                                       UpdatedAt=@UpdatedAt
@@ -70,8 +88,12 @@ namespace Yachts.BackEnd
                     int result = db.ExecuteNonQuery(sql, Params);
                     if (result > 0)
                     {
-                        string success = "<script>alert('更新成功'); window.location='Country-B.aspx';</script>";
+                        string success = "<script>alert('更新成功！'); window.location='Country-B.aspx';</script>";
                         Response.Write(success);
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('新增失敗，請稍後再試！'); window.location='Dealers-B.aspx';</script>");
                     }
                 }
                 else

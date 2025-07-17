@@ -19,6 +19,7 @@ namespace Yachts
             {
                 BindNewsAlbum();
                 BindCategory();
+
             }
         }
         private void BindNewsAlbum()  //顯示相簿的Repeater
@@ -27,13 +28,13 @@ namespace Yachts
 
             if (!string.IsNullOrEmpty(categoryId))
             {
-                string sql = @"select n.Title, n.CreatedAt , n.Id, n.UpdatedAt, n.categoryId,   
+                string sql = @"select n.Title, n.CreatedAt , n.Id, n.UpdatedAt, n.categoryId, n.Sticky,  
                                       n.CoverPath,
                                       nc.Name as CategoryName
                                from News n
                                join NewsCategory nc on n.CategoryId =nc.Id
                                where n.CategoryId = @CategoryId
-                               order by CategoryName , n.CreatedAt desc
+                               order by n.Sticky desc, n.CreatedAt desc
                               ";
 
                 var param = new Dictionary<string, object> { { "@CategoryId", categoryId } };
@@ -45,8 +46,6 @@ namespace Yachts
                 if (dt.Rows.Count > 0)
                 {
                     string categoryName = dt.Rows[0]["CategoryName"].ToString();
-                    //string coverPath = dt.Rows[0]["CoverPath"].ToString();
-                    //CoverPath.ImageUrl = "~/Uploads/Photos/" + coverPath;
 
                     Label1.Text = categoryName;
                     Label2.Text = categoryName;

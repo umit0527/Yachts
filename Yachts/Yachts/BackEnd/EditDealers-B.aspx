@@ -7,13 +7,7 @@
         <div>
             <div class="d-flex">
                 <div>
-                    國家：<asp:DropDownList ID="CountryList" runat="server" AutoPostBack="True"
-                        OnSelectedIndexChanged="CountryList_SelectedIndexChanged">
-                    </asp:DropDownList>
-                </div>
-                <div class="d-flex">
-                    城市：<asp:DropDownList ID="CityList" runat="server">
-                    </asp:DropDownList>
+                    國家：<asp:DropDownList ID="CountryList" runat="server" AutoPostBack="True"></asp:DropDownList>
                 </div>
             </div>
             <ckeditor:CKEditorControl ID="CKEditor1" runat="server" BasePath="~/Scripts/ckeditor/"

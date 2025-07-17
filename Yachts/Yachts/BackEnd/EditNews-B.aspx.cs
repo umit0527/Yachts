@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -57,7 +58,7 @@ namespace Yachts.BackEnd
             {
                 int newsId = int.Parse(Request.QueryString["Id"]);
 
-                string sql = @"select CategoryId,Title, Content ,UpdatedAt,CoverPath
+                string sql = @"select CategoryId,Title, Content ,UpdatedAt ,CoverPath ,Sticky
                                from News
                                where Id = @Id";
 
@@ -70,6 +71,7 @@ namespace Yachts.BackEnd
                     string content = dt.Rows[0]["Content"].ToString();
                     string coverPath = dt.Rows[0]["CoverPath"].ToString();
                     string title = dt.Rows[0]["Title"].ToString();
+                    bool sticky = Convert.ToBoolean(dt.Rows[0]["Sticky"] != DBNull.Value && Convert.ToBoolean(dt.Rows[0]["Sticky"]));
 
                     txtTitle.Text = title;
                     imgCover.ImageUrl = "~/Uploads/Photos/" + coverPath;
@@ -77,6 +79,7 @@ namespace Yachts.BackEnd
                     BindCategoryList(); // 所有種類
                     CategoryList.SelectedValue = categoryId.ToString();
 
+                    chbSticky.Checked = sticky;
                     CKEditor1.Text = content;
                 }
             }
@@ -106,18 +109,21 @@ namespace Yachts.BackEnd
         {
             int newsId = int.Parse(Request.QueryString["Id"]);
             string content = CKEditor1.Text.Trim();
+            // 把 HTML tag 移除，只留下純文字，用來檢查「送出時是否真的為空，還是保有html標籤」
+            string plainText = Regex.Replace(content, "<.*?>", "").Trim();
             string categoryList = CategoryList.SelectedValue;
             string title = txtTitle.Text.Trim();
             string newCoverPath = "";
             HttpFileCollection uploadedFiles = Request.Files;
+            bool sticky = chbSticky.Checked;
 
             if (Request.QueryString["Id"] != null)
             {
-                // 驗證是否有上傳圖片
+                // 驗證是否有上傳圖片、選擇種類、填寫標題與內容
                 if (string.IsNullOrWhiteSpace(categoryList) || string.IsNullOrWhiteSpace(title) ||
-                         string.IsNullOrWhiteSpace(content))
+                    string.IsNullOrWhiteSpace(plainText))
                 {
-                    Response.Write("<script>alert('請填寫所有欄位');</script>");
+                    Response.Write("<script>alert('必填欄位填寫不完整');</script>");
                     return;
                 }
 
@@ -125,6 +131,7 @@ namespace Yachts.BackEnd
                 string getCoverSql = "SELECT CoverPath FROM News WHERE Id = @Id";
                 var paramCover = new Dictionary<string, object> { { "@Id", newsId } };
                 DataTable dtCover = db.SearchDB(getCoverSql, paramCover);
+                
                 if (dtCover.Rows.Count > 0)
                 {
                     newCoverPath = dtCover.Rows[0]["CoverPath"].ToString();
@@ -156,7 +163,8 @@ namespace Yachts.BackEnd
                                               CategoryId=@CategoryId ,
                                               Title=@Title,
                                               CoverPath=@CoverPath,
-                                              UpdatedAt=@UpdatedAt
+                                              UpdatedAt=@UpdatedAt,
+                                              Sticky=@Sticky
                                               where Id=@Id
                               ";
 
@@ -167,6 +175,7 @@ namespace Yachts.BackEnd
         { "@Title", title },
         { "@CoverPath", newCoverPath  },
         { "@UpdatedAt", DateTime.Now },
+        {"@Sticky", sticky},
         { "@Id", newsId }
     };
 
@@ -174,11 +183,11 @@ namespace Yachts.BackEnd
 
                 if (result > 0)
                 {
-                    Response.Write("<script>alert('修改成功！'); window.location='News-B.aspx';</script>");
+                    Response.Write("<script>alert('更新成功！'); window.location='News-B.aspx';</script>");
                 }
                 else
                 {
-                    Response.Write("<script>alert('送出失敗，請稍後再試。');</script>");
+                    Response.Write("<script>alert('更新失敗，請稍後再試！');</script>");
                 }
             }
         }
