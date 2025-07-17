@@ -1,73 +1,73 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\",
+  "WorkspaceRootPath": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|c:\\users\\\u856D\u5B87\u5B8F\\desktop\\yachts\u5099\u4EFD\\yachts-frontend-website\\yachts\\yachts\\backend\\yachts-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\yachts-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\addyachts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\addyachts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\yachts-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\yachts-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\yachts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\yachts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\edityachts-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\edityachts-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\edityachts-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\edityachts-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\index.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|c:\\users\\\u856D\u5B87\u5B8F\\desktop\\yachts\\yachts\\yachts\\backend\\yachts-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\yachts-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\backend\\addyachts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\addyachts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\backend\\yachts-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\yachts-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\yachts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\yachts.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\backend\\edityachts-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\edityachts-b.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\backend\\edityachts-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\edityachts-b.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\index.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\yachts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\yachts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\yachts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\site-f.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\site-f.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\site-f.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\backend\\addyachts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\backend\\addyachts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\backend\\addyachts.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\yachtsspecification.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\yachtsspecification.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\yachtsspecification.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\news.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\news.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\news.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\yachtsspecification.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\yachtsspecification.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\yachtsspecification.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\yachtslayout.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\yachtslayout.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\yachtslayout.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\yachtslayout.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\yachtslayout.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\yachtslayout.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\yachts\\news.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "AbsoluteMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\yachts\\news.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
       "RelativeMoniker": "D:0:0:{9E86D112-E708-4BB3-9601-08ACB207DCC3}|Yachts\\Yachts.csproj|solutionrelative:yachts\\news.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
     },
     {
@@ -81,15 +81,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AddYachts.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\AddYachts.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\AddYachts.aspx.cs",
               "RelativeDocumentMoniker": "Yachts\\BackEnd\\AddYachts.aspx.cs",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\AddYachts.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\AddYachts.aspx.cs",
               "RelativeToolTip": "Yachts\\BackEnd\\AddYachts.aspx.cs",
               "ViewState": "AgIAAFEBAAAAAAAAAAAmwFgBAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -97,11 +97,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "EditYachts-B.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\EditYachts-B.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\EditYachts-B.aspx.cs",
               "RelativeDocumentMoniker": "Yachts\\BackEnd\\EditYachts-B.aspx.cs",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\EditYachts-B.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\EditYachts-B.aspx.cs",
               "RelativeToolTip": "Yachts\\BackEnd\\EditYachts-B.aspx.cs",
               "ViewState": "AgIAAJIBAAAAAAAAAAAqwKEBAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -109,11 +109,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "EditYachts-B.aspx",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\EditYachts-B.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\EditYachts-B.aspx",
               "RelativeDocumentMoniker": "Yachts\\BackEnd\\EditYachts-B.aspx",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\EditYachts-B.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\EditYachts-B.aspx",
               "RelativeToolTip": "Yachts\\BackEnd\\EditYachts-B.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -123,9 +123,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "Index.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Index.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\Index.aspx.cs",
               "RelativeDocumentMoniker": "Yachts\\Index.aspx.cs",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Index.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\Index.aspx.cs",
               "RelativeToolTip": "Yachts\\Index.aspx.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAswA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -133,35 +133,37 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Index.aspx",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Index.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\Index.aspx",
               "RelativeDocumentMoniker": "Yachts\\Index.aspx",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Index.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\Index.aspx",
               "RelativeToolTip": "Yachts\\Index.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-07-16T13:30:36.615Z"
+              "WhenOpened": "2025-07-16T13:30:36.615Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "Site-F.Master",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Site-F.Master",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\Site-F.Master",
               "RelativeDocumentMoniker": "Yachts\\Site-F.Master",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Site-F.Master",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\Site-F.Master",
               "RelativeToolTip": "Yachts\\Site-F.Master",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-07-16T13:19:03.305Z"
+              "WhenOpened": "2025-07-16T13:19:03.305Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
               "Title": "AddYachts.aspx",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\AddYachts.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\AddYachts.aspx",
               "RelativeDocumentMoniker": "Yachts\\BackEnd\\AddYachts.aspx",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\AddYachts.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\AddYachts.aspx",
               "RelativeToolTip": "Yachts\\BackEnd\\AddYachts.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -171,9 +173,9 @@
               "$type": "Document",
               "DocumentIndex": 11,
               "Title": "YachtsSpecification.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\YachtsSpecification.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\YachtsSpecification.aspx.cs",
               "RelativeDocumentMoniker": "Yachts\\YachtsSpecification.aspx.cs",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\YachtsSpecification.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\YachtsSpecification.aspx.cs",
               "RelativeToolTip": "Yachts\\YachtsSpecification.aspx.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAwwBkAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -183,9 +185,9 @@
               "$type": "Document",
               "DocumentIndex": 13,
               "Title": "YachtsSpecification.aspx",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\YachtsSpecification.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\YachtsSpecification.aspx",
               "RelativeDocumentMoniker": "Yachts\\YachtsSpecification.aspx",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\YachtsSpecification.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\YachtsSpecification.aspx",
               "RelativeToolTip": "Yachts\\YachtsSpecification.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -195,9 +197,9 @@
               "$type": "Document",
               "DocumentIndex": 15,
               "Title": "YachtsLayout.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\YachtsLayout.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\YachtsLayout.aspx.cs",
               "RelativeDocumentMoniker": "Yachts\\YachtsLayout.aspx.cs",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\YachtsLayout.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\YachtsLayout.aspx.cs",
               "RelativeToolTip": "Yachts\\YachtsLayout.aspx.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE8AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -207,9 +209,9 @@
               "$type": "Document",
               "DocumentIndex": 14,
               "Title": "YachtsLayout.aspx",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\YachtsLayout.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\YachtsLayout.aspx",
               "RelativeDocumentMoniker": "Yachts\\YachtsLayout.aspx",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\YachtsLayout.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\YachtsLayout.aspx",
               "RelativeToolTip": "Yachts\\YachtsLayout.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -219,9 +221,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "Yachts.aspx",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Yachts.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\Yachts.aspx",
               "RelativeDocumentMoniker": "Yachts\\Yachts.aspx",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Yachts.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\Yachts.aspx",
               "RelativeToolTip": "Yachts\\Yachts.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -229,11 +231,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Yachts.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Yachts.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\Yachts.aspx.cs",
               "RelativeDocumentMoniker": "Yachts\\Yachts.aspx.cs",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\Yachts.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\Yachts.aspx.cs",
               "RelativeToolTip": "Yachts\\Yachts.aspx.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAkwCIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -243,9 +245,9 @@
               "$type": "Document",
               "DocumentIndex": 12,
               "Title": "News.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\News.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\News.aspx.cs",
               "RelativeDocumentMoniker": "Yachts\\News.aspx.cs",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\News.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\News.aspx.cs",
               "RelativeToolTip": "Yachts\\News.aspx.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAIwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -255,21 +257,22 @@
               "$type": "Document",
               "DocumentIndex": 16,
               "Title": "News.aspx",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\News.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\News.aspx",
               "RelativeDocumentMoniker": "Yachts\\News.aspx",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\News.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\News.aspx",
               "RelativeToolTip": "Yachts\\News.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2025-07-14T06:21:35.206Z"
+              "WhenOpened": "2025-07-14T06:21:35.206Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Yachts-B.aspx",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\Yachts-B.aspx",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\Yachts-B.aspx",
               "RelativeDocumentMoniker": "Yachts\\BackEnd\\Yachts-B.aspx",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\Yachts-B.aspx",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\Yachts-B.aspx",
               "RelativeToolTip": "Yachts\\BackEnd\\Yachts-B.aspx",
               "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
@@ -278,11 +281,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Yachts-B.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\Yachts-B.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\Yachts-B.aspx.cs",
               "RelativeDocumentMoniker": "Yachts\\BackEnd\\Yachts-B.aspx.cs",
-              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\Yachts\\Yachts\\BackEnd\\Yachts-B.aspx.cs",
+              "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\\Yachts\\Yachts\\BackEnd\\Yachts-B.aspx.cs",
               "RelativeToolTip": "Yachts\\BackEnd\\Yachts-B.aspx.cs",
               "ViewState": "AgIAAGgAAAAAAAAAAAAkwG0AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -293,9 +296,9 @@
               "DocumentIndex": 17,
               "Title": "index.htm",
               "DocumentMoniker": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\html\\tayana\\index.htm",
-              "RelativeDocumentMoniker": "..\\html\\tayana\\index.htm",
+              "RelativeDocumentMoniker": "..\\..\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\html\\tayana\\index.htm",
               "ToolTip": "C:\\Users\\\u856D\u5B87\u5B8F\\Desktop\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\html\\tayana\\index.htm",
-              "RelativeToolTip": "..\\html\\tayana\\index.htm",
+              "RelativeToolTip": "..\\..\\Yachts\u5099\u4EFD\\Yachts-FrontEnd-WebSite\\html\\tayana\\index.htm",
               "ViewState": "AgIAAIQAAAAAAAAAAAAAAJUAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-07-13T13:40:41.813Z"
