@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site-F.Master" AutoEventWireup="true" CodeBehind="Dealers.aspx.cs" Inherits="Yachts.FrontEnd.Dealers" %>
+<%@ Register TagPrefix="uc1" TagName="Pagination" Src="~/Pagination.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 <link href="/css/homestyle2.css" rel="stylesheet" type="text/css" />
@@ -42,8 +43,8 @@
 
 
         <!--------------------------------右邊選單開始---------------------------------------------------->
-        <div id="crumb"><a href="#">Home</a> >> <a href="#">Dealers </a>>> 
-            <a href="#">
+        <div id="crumb"><a href="Index.aspx">Home</a> >> <a href="Dealers.aspx">Dealers</a>>> 
+            <a href="Dealers.aspx?CountryId=<%= Request.QueryString["CountryId"] %>">
                 <asp:Label ID="Label1" runat="server" Text="Label" style="color:rgb(52, 169, 212);"></asp:Label>
             </a></div>
         <div class="right">
@@ -58,16 +59,14 @@
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-
-                <%--分頁開始--%>
-                <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>
-                <div class="pagenumber1">Items：<span>89</span>  |  Pages：<span>1/9</span></div>
-                <%--分頁結束--%>
             </div>
-
             <!--------------------------------內容結束------------------------------------------------------>
-        </div>
-
+        
+        <%--分頁開始--%>
+<div class="align-items-center">
+    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+    <uc1:pagination runat="server" id="Pagination" />
+</div></div>
         <!--------------------------------右邊選單結束---------------------------------------------------->
     </div>
 

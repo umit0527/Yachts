@@ -60,6 +60,33 @@ namespace Yachts.BackEnd
         protected global::System.Web.UI.WebControls.Image imgCover;
 
         /// <summary>
+        /// FUDownloadsFile 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FUDownloadsFile;
+
+        /// <summary>
+        /// rptDownloads 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptDownloads;
+
+        /// <summary>
+        /// rptEditFiles 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptEditFiles;
+
+        /// <summary>
         /// CKEditor1 控制項。
         /// </summary>
         /// <remarks>

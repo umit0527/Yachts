@@ -106,18 +106,18 @@
             <div class="contain">
                 <div class="sub">
                     <p>
-                        <a href="index.aspx">Home</a>
+                        <a href="Index.aspx">Home</a>
                     </p>
                 </div>
 
                 <!--------------------------------選單開始---------------------------------------------------->
                 <div class="menu">
                     <ul>
-                        <li class="menuli01"><a href="#">Yachts</a></li>
-                        <li class="menuli02"><a href="#">NEWS</a></li>
-                        <li class="menuli03"><a href="Company.aspx">COMPANY</a></li>
-                        <li class="menuli04"><a href="Dealers.aspx">DEALERS</a></li>
-                        <li class="menuli05"><a href="Contact.aspx">CONTACT</a></li>
+                        <asp:LinkButton ID="LinkButton1" runat="server" href="Yachts.aspx"><li class="menuli01"></li></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton2" runat="server" href="News.aspx"><li class="menuli02"></li></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton3" runat="server" href="Company.aspx"><li class="menuli03"></li></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton4" runat="server" href="Dealers.aspx"><li class="menuli04"></li></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton5" runat="server" href="Contact.aspx"><li class="menuli05"></li></asp:LinkButton>
                     </ul>
                 </div>
                 <!--------------------------------選單開始結束---------------------------------------------------->

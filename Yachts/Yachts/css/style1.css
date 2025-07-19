@@ -70,7 +70,6 @@ body {
 .menu a {
 	color: #F6F6F6;
 	text-decoration: none;
-	display: block;
 	height: 71px;
 }
 .menuli01  {
@@ -129,6 +128,10 @@ body {
 	width: 1002px;
 	margin-top: 18px;
 	float: left;
+	top: 0px;
+	left: 0px;
+	position: relative;
+	margin-bottom: 20px;
 }
 .news a {
 	color: #727272;
@@ -150,9 +153,6 @@ body {
 	padding-right: 19px;
 	font-size: 90%;
 }
-.newstitlep2 a:hover {
-}
-
 .newstitlep2 a {
 	color: #02a5b8;
 	text-decoration: none;
@@ -167,6 +167,7 @@ body {
 .news li {
 	float: left;
 	padding-left: 22px;
+	width: 329px;
 }
 .newstop {
 	top: 13px;
@@ -344,7 +345,7 @@ body {
 	height: 70px;
 	width: 103px;
 }
-.on    {
+/* .on    {
 	background-image: url(../images/changbg.png);
 	background-repeat: no-repeat;
 	background-position: left bottom;
@@ -353,7 +354,7 @@ body {
 	display: block;
 	float: left;
 	z-index: 15;
-}
+} */
 .wordtitle {
 	position: absolute;
 	left: 50px;

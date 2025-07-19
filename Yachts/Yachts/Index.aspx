@@ -1,12 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site-F.Master" AutoEventWireup="true" CodeBehind="Index.aspx.cs" Inherits="Yachts.FrontEnd.Home1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="/css/style1.css?v=10" rel="stylesheet" type="text/css" />
-
+    <link href="/css/style1.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="contain">
-
         <div>
             <!--遮罩-->
             <div class="bannermasks">
@@ -23,7 +21,7 @@
                             <asp:Repeater ID="rptBigBanner" runat="server" OnItemDataBound="rptBigBanner_ItemDataBound">
                                 <ItemTemplate>
                                     <li class="info <%# Container.ItemIndex == 0 ? "on" : "" %>">
-                                            <asp:Image runat="server" ImageUrl='<%# "~/Uploads/Photos/" + Eval("CarouselImageImgPath") %>' AlternateText="" />
+                                            <asp:Image runat="server" ImageUrl='<%# "~/Uploads/Photos/" + Eval("CarouselImageImgPath") %>' AlternateText="" style="width:966px; height:424px; object-fit:contain;"/>
                                             <asp:Image ID="imgLabel" runat="server" Style="left: 18px; top: 113px; position: absolute;" Visible="false" />
                                         <!--文字開始-->
                                         <div class="wordtitle">
@@ -64,11 +62,11 @@
             <p class="newstitlep1">
                 <img src="/images/news.gif" alt="news" />
             </p>
-            <p class="newstitlep2"><a href="WebForm3">More>></a></p>
+            <p class="newstitlep2"><a href="News.aspx" style="width:95px;height:95px;">More>></a></p>
         </div>
 
         <ul>
-            <!--TOP第一則最新消息-->
+            <!--最新消息-->
             <asp:Repeater ID="rptNews" runat="server">
                 <ItemTemplate>
                     <li>

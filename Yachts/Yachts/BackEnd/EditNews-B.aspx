@@ -14,10 +14,40 @@
                     <asp:CheckBox ID="chbSticky" runat="server" RepeatDirection="Horizontal"></asp:CheckBox>
                     <br />
                     <br />
-                    <div class="d-flex align-items-center">
-                        封面：<asp:FileUpload ID="FileUpload1" runat="server" ClientIDMode="Static" AllowMultiple="true" />
-                        <div>
-                            <asp:Image ID="imgCover" runat="server" Width="187px" Height="121px" />
+                    <div class="row align-items-center">
+                        <div class="col-6 ">
+                            <div class="d-flex align-items-center">
+                                封面：<asp:FileUpload ID="FileUpload1" runat="server" ClientIDMode="Static" AllowMultiple="true" />
+                                <div>
+                                    <asp:Image ID="imgCover" runat="server" Width="187px" Height="121px" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            檔案下載：
+                        <asp:FileUpload ID="FUDownloadsFile" runat="server" ClientIDMode="Static" AllowMultiple="true" />
+                            <div class="">
+                                <asp:Repeater ID="rptDownloads" runat="server">
+                                    <ItemTemplate>
+                                        <p>
+                                            <asp:Literal ID="LilDownloads" runat="server" Text='<%# Eval("FilePath") %>'></asp:Literal>
+                                        </p>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </div>
+                            <asp:Repeater ID="rptEditFiles" runat="server" OnItemCommand="rptEditFiles_ItemCommand">
+    <ItemTemplate>
+        <p>
+            <%# System.IO.Path.GetFileName(Eval("FilePath").ToString()) %>
+            <asp:LinkButton ID="btnDeleteFile" runat="server"
+                CommandName="DeleteFile"
+                CommandArgument='<%# Eval("Id") %>'
+                OnClientClick="return confirm('確定要刪除這個檔案嗎？');">
+                刪除
+            </asp:LinkButton>
+        </p>
+    </ItemTemplate>
+</asp:Repeater>
                         </div>
                     </div>
                 </div>

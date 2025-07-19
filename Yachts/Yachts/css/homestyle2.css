@@ -292,6 +292,10 @@ body {
 	width: 100%;
 	line-height: 170%;
 }
+.box3 img{
+max-width: 100%;
+  height: auto;
+}
 .box5 {
 	width: 100%;
 	float: left;
@@ -345,7 +349,7 @@ body {
 
 .box4 {
 	float: left;
-	width: 109%;
+	width: 100%;
 	line-height: 170%;
 	border-top-width: 1px;
 	border-top-style: dashed;
@@ -483,7 +487,7 @@ body {
 	border-bottom-style: solid;
 	border-bottom-color: #d3d3d3;
 	padding-bottom: 7px;
-	background-position: 0px 6px;
+	background-position: 0px 5px;
 	margin-bottom: 10px;
 }
 .buttom00 {
@@ -496,7 +500,7 @@ body {
 	color: #34A9D4;
 	font-weight: bold;
 	font-size: 120%;
-	padding-left: 11px;
+	padding-left: 22px;
 	float: left;
 	margin-top: 3px;
 }
@@ -517,6 +521,64 @@ body {
 	right: 19px;
 	font-size: 80%;
 	color: #747474;
+}
+div#pagination {
+    height: 50px;
+    margin-top: 3px;
+}
+    div#pagination .count {
+        float: left;
+        padding: 5px;
+    }
+    div#pagination .pages {
+        float: right;
+        padding: 5px;
+    }
+div#paginationTop .count {
+    float: left;
+    padding: 5px;
+}
+div#paginationTop .pages {
+    float: right;
+    padding: 5px;
+}
+div.pagination {
+    padding-left: 4px;
+    margin: 0px;
+	align-items: center;
+}
+    div.pagination a {
+        padding: 2px 5px 2px 5px;
+        margin: 2px;
+        border: 1px solid #8dab68;
+        text-decoration: none; /* no underline */
+        color: #5f7f39;
+    }
+        div.pagination a:hover, div.pagination a:active {
+            border: 1px solid #5f7f39;
+            color: #000;
+        }
+    div.pagination span.current {
+        padding: 2px 5px 2px 5px;
+        margin: 2px;
+        border: 1px solid #5f7f39;
+        font-weight: bold;
+        background-color: #5f7f39;
+        color: #FFF;
+    }
+    div.pagination span.disabled {
+        padding: 2px 5px 2px 5px;
+        margin: 2px;
+        border: 1px solid #EEE;
+        color: #DDD;
+    }
+.bold14 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+.rederror {
+    color: red;
 }
 #crumb a {
 	color: #747474;
@@ -644,7 +706,7 @@ body {
 }
 .from01 {
 	float: left;
-	width: 109%;
+	width: 100%;
 	background-color: #f0f0f0;
 	padding: 4%;
 	margin-bottom: 20px;

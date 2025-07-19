@@ -168,9 +168,9 @@ namespace Yachts
             if (!string.IsNullOrEmpty(modelId))
             {
                 string sql = @"select *
-                           from Downloads d
-                           join Model m on m.Id=d.ModelId
-                           where d.ModelId=@ModelId
+                           from YachtsDownloads yd
+                           join Model m on m.Id=yd.ModelId
+                           where yd.ModelId=@ModelId
                           ";
                 var param = new Dictionary<string, object> { { "@ModelId", modelId } };
                 DataTable dt = db.SearchDB(sql, param);
@@ -187,7 +187,7 @@ namespace Yachts
             string id = btn.CommandArgument;
 
             // 從資料庫根據 fileId 取得檔案資訊
-            string sql = "SELECT * FROM Downloads WHERE Id = @Id";
+            string sql = "SELECT * FROM YachtsDownloads WHERE Id = @Id";
 
             var param = new Dictionary<string, object> { { "@Id", id } };
 

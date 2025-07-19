@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site-F.Master" AutoEventWireup="true" CodeBehind="NewsContent.aspx.cs" Inherits="Yachts.NewsContent" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="/css/homestyle2.css" rel="stylesheet" type="text/css" />
+    <link href="/css/homestyle2.css?v=1" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -42,8 +42,8 @@
 
             <!--------------------------------右邊選單開始---------------------------------------------------->
             <div id="crumb">
-                <a href="#">Home</a> >> <a href="#">Company </a>>> 
-     <a href="#">
+                <a href="Index.aspx">Home</a> >> <a href='<%= "News.aspx?CategoryId=" + Request.QueryString["CategoryId"] %>'>News </a>>> 
+     <a href='<%= "News.aspx?CategoryId=2"  %>'>
          <asp:Label ID="Label1" runat="server" Text="Label" Style="color: rgb(52, 169, 212);"></asp:Label>
      </a>
             </div>
@@ -69,6 +69,7 @@
                     </div>
 
                     <!--------------------------------內容開始---------------------------------------------------->
+                    <%--<div></div>--%>
                     <asp:Repeater ID="rptNewsContent" runat="server">
                         <ItemTemplate>
                                 <div class="d-flex box3">

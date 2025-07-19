@@ -13,5 +13,15 @@ namespace Yachts.BackEnd
         {
 
         }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+
+            Session.Clear();       // 清除所有 Session 資料
+            Session.Abandon();     // 結束目前的 Session
+            string logout = "<script>alert('登出成功'); window.location='Login-B.aspx';</script>";
+            Response.Write(logout);
+            Response.End();
+        }
     }
 }

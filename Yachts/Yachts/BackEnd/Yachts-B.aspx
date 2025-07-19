@@ -7,6 +7,16 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <div class="content-header">
+        <div>
+            <div class="d-flex align-items-center">
+                搜尋：
+    <asp:TextBox ID="SearchBox" runat="server" CssClass="form-control me-2 w-25" OnTextChanged="SearchBox_TextChanged" />
+
+                <!-- 用 Font Awesome icon 做成 button -->
+                <asp:LinkButton ID="SearchButton" runat="server" OnClick="SearchButton_Click" CssClass="fa-solid fa-magnifying-glass text-decoration-none">
+                </asp:LinkButton>
+            </div>
+        </div>
         <div class="container-fluid">
             <asp:Button ID="btnAddYachts" runat="server" Text="新增船型" OnClick="btnAddYachts_Click" CssClass="btn btn-warning" />
         </div>
@@ -23,7 +33,7 @@
                         <div class="card-body">
                             <div class="row mb-2">
                                 <div class="col-12">
-                                    <div class="d-flex">
+                                    <div class="d-flex align-items-center">
                                         <h3><%# Eval("ModelName") %></h3>
                                         <h4><%# Eval("Label") %></h4>
                                     </div>
@@ -78,15 +88,15 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mb-2">            
-                                <h6>輪播圖：</h6>
-                                    <asp:Repeater ID="rptCarouselImgs" runat="server">
-                                        <ItemTemplate>
-                                            <div class="img-fluid mb-2 col-3 text-center align-content-center">
-                                                <img src='<%# ResolveUrl("/Uploads/Photos/") + Eval("CarouselImgPath") %>' class="img-thumbnail" />
-                                            </div>
-                                        </ItemTemplate>
-                                    </asp:Repeater>
+                        <div class="row mb-2">
+                            <h6>輪播圖：</h6>
+                            <asp:Repeater ID="rptCarouselImgs" runat="server">
+                                <ItemTemplate>
+                                    <div class="img-fluid mb-2 col-3 text-center align-content-center">
+                                        <img src='<%# ResolveUrl("/Uploads/Photos/") + Eval("CarouselImgPath") %>' class="img-thumbnail" />
+                                    </div>
+                                </ItemTemplate>
+                            </asp:Repeater>
                         </div>
                         <div class="row mb-2">
                             <div class="col-md-12">

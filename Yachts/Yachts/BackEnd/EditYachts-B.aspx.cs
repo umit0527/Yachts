@@ -40,7 +40,7 @@ namespace Yachts.BackEnd
                 if (ViewState["ModelId"] != null)  // 從 ViewState 取得 ModelId
                 {
                     int modelId = Convert.ToInt32(ViewState["ModelId"]);
-
+                    
                     BindCarouselImgs(modelId);
                     BindFiles(modelId);
                     BindPrincipal(modelId);
@@ -68,7 +68,7 @@ namespace Yachts.BackEnd
         private void BindFiles(int modelId, List<int> excludeIds = null)  //顯示 "檔案下載"
         {
             string sql = @"SELECT * 
-                           FROM Downloads 
+                           FROM YachtsDownloads 
                            WHERE ModelId = @ModelId 
                            ORDER BY CreatedAt DESC";
             var param = new Dictionary<string, object> { { "@ModelId", modelId } };
@@ -328,7 +328,7 @@ namespace Yachts.BackEnd
                     if (file != null && file.ContentLength > 0)
                     {
                         string extension = Path.GetExtension(file.FileName);  //取得副檔名
-                        string fileName = DateTime.Now.ToString("yyyyMMddHHmmss") + "_" + Guid.NewGuid().ToString("N") + extension;
+                        string fileName = DateTime.UtcNow.Ticks.ToString() + extension;
                         string filePath = "~/Uploads/" + fileName;  // 儲存路徑
                         string uploadsFolder = Server.MapPath("~/Uploads/"); // 取得實體路徑
                         Directory.CreateDirectory(uploadsFolder); // 確保資料夾存在         
@@ -337,7 +337,7 @@ namespace Yachts.BackEnd
                         // 實際儲存檔案到 uploads 資料夾
                         file.SaveAs(fullPath);
 
-                        string sql = @"INSERT INTO Downloads (ModelId, FilePath,  UpdatedAt)
+                        string sql = @"INSERT INTO YachtsDownloads (ModelId, FilePath,  UpdatedAt)
                                        VALUES  (@ModelId, @FilePath, @UpdatedAt)
                                       ";
 
@@ -357,7 +357,7 @@ namespace Yachts.BackEnd
         {
             var uploadCarouselImg = FUCarouselImgPath.PostedFiles;
 
-            //如果有上傳檔案
+            //如果有上傳圖片
             if (uploadCarouselImg != null)
             {
                 foreach (HttpPostedFile img in uploadCarouselImg)
@@ -488,7 +488,7 @@ namespace Yachts.BackEnd
                     foreach (int id in deleteFileList)
                     {
                         //找出要刪除的那個檔案名稱
-                        string sqlFilePath = "SELECT FilePath FROM Downloads WHERE Id = @Id";
+                        string sqlFilePath = "SELECT FilePath FROM YachtsDownloads WHERE Id = @Id";
                         var param = new Dictionary<string, object> { { "@Id", id } };
                         object resultDeletFile = db.ExecuteScalar(sqlFilePath, param);
                         if (resultDeletFile != null)
@@ -502,7 +502,7 @@ namespace Yachts.BackEnd
                             }
 
                         }
-                        string sqlDeletFile = "DELETE FROM Downloads WHERE Id = @Id";  //找出要刪除的那個檔案Id
+                        string sqlDeletFile = "DELETE FROM YachtsDownloads WHERE Id = @Id";  //找出要刪除的那個檔案Id
                         db.ExecuteNonQuery(sqlDeletFile, param);
                     }
                 }

@@ -105,7 +105,7 @@ namespace Yachts.FrontEnd
                 }
             }
         }
-        private void BindNews()
+        private void BindNews()  //顯示 最新消息
         {
             string newsId = Request.QueryString["NewsId"];
             string sql = "";
@@ -116,7 +116,7 @@ namespace Yachts.FrontEnd
             {
                 sql = @"SELECT TOP 3 Title, Content, Sticky, CoverPath, CreatedAt, Id as NewsId
                         FROM News
-                        ORDER BY Id DESC";
+                        ORDER BY Sticky DESC ,createdAt desc";
             }
 
             DataTable dt = db.SearchDB(sql, param);

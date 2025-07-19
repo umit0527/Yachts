@@ -29,7 +29,7 @@ namespace Yachts.BackEnd
                            left join Model m on yc.ModelId =m.Id
                            left join YachtsLayoutImage y on y.ModelId=m.Id
                            left join Principal p on p.ModelId=m.Id
-                           order by m.Label desc, yc.CreatedAt desc
+                           order by m.Label desc, yc.CreatedAt desc ,yc.UpdatedAt desc
                           ";
             DataTable dt = db.SearchDB(sql);
             Repeater1.DataSource = dt;
@@ -65,7 +65,7 @@ namespace Yachts.BackEnd
                 if (rptFiles != null)
                 {
                     string fileSql = @"SELECT FilePath 
-                               FROM Downloads 
+                               FROM YachtsDownloads 
                                WHERE ModelId = @ModelId 
                                ORDER BY CreatedAt DESC";
                     var fileParams = new Dictionary<string, object> { { "@ModelId", modelId } };
@@ -107,7 +107,7 @@ namespace Yachts.BackEnd
                 int modelId = Convert.ToInt32(dt.Rows[0]["ModelId"]);
 
                 // 刪除 Downloads
-                db.ExecuteNonQuery("DELETE FROM Downloads WHERE ModelId = @ModelId", new Dictionary<string, object> { { "@ModelId", modelId } });
+                db.ExecuteNonQuery("DELETE FROM YachtsDownloads WHERE ModelId = @ModelId", new Dictionary<string, object> { { "@ModelId", modelId } });
 
                 // 刪除 Layout Image
                 db.ExecuteNonQuery("DELETE FROM YachtsLayoutImage WHERE ModelId = @ModelId", new Dictionary<string, object> { { "@ModelId", modelId } });
@@ -131,5 +131,13 @@ namespace Yachts.BackEnd
             Response.Redirect("AddYachts.aspx");
         }
 
+        protected void SearchBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        protected void SearchButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

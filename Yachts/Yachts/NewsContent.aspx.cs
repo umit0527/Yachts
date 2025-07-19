@@ -20,6 +20,7 @@ namespace Yachts
                 BindCategory();
 
                 string newsId = Request.QueryString["Id"];
+                Session["CategoryId"] = Request.QueryString["CategoryId"];
 
                 // 預設導向第一個種類的消息列表
                 if (string.IsNullOrEmpty(newsId))

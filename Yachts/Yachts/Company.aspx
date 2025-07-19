@@ -43,8 +43,8 @@
 
         <!--------------------------------右邊選單開始---------------------------------------------------->
         <div id="crumb">
-            <a href="#">Home</a> >> <a href="#">Company </a>>> 
-        <a href="#">
+            <a href="Index.aspx">Home</a> >> <a href="Company.aspx">Company </a>>> 
+        <a href="Company.aspx?CategoryId=<%= Request.QueryString["CategoryId"] %>">
             <asp:Label ID="Label1" runat="server" Text="Label" Style="color: rgb(52, 169, 212);"></asp:Label>
         </a>
         </div>

@@ -57,7 +57,7 @@
                 <asp:Repeater ID="rptCarouselMainImg" runat="server">
                     <ItemTemplate>
                         <li class="info">
-                            <asp:Image ID="MainImgPath" runat="server" ImageUrl='<%# "~/Uploads/Photos/"+ Eval("CarouselImgPath") %>' /></li>
+                            <asp:Image ID="MainImgPath" runat="server" ImageUrl='<%# "~/Uploads/Photos/"+ Eval("CarouselImgPath") %>' style="width:967px; height:371px;"/></li>
                     </ItemTemplate>
                 </asp:Repeater>
             </ul>
@@ -118,8 +118,8 @@
 
         <!--------------------------------右邊選單開始---------------------------------------------------->
         <div id="crumb">
-            <a href="#">Home</a> >> <a href="#">Yachts </a>>> 
-            <a href="#">
+            <a href="Index.aspx">Home</a> >> <a href="<%= "Yachts.aspx?ModelId=" + Request.QueryString["ModelId"] %>">Yachts </a>>> 
+            <a href="<%= "YachtsSpecification.aspx?ModelId=" + Request.QueryString["ModelId"] %>">
                 <asp:Label ID="txtModel1" runat="server" Text="Label" Style="color: rgb(52, 169, 212);"></asp:Label>
             </a>
         </div>

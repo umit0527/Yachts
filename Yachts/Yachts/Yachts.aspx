@@ -62,7 +62,7 @@
                     <asp:Repeater ID="rptCarouselMainImg" runat="server">
                         <ItemTemplate>
                             <li class="info" style="width:100%;">
-                                <asp:Image ID="MainImgPath" runat="server" ImageUrl='<%# "~/Uploads/Photos/"+ Eval("CarouselImgPath") %>' />
+                                <asp:Image ID="MainImgPath" runat="server" ImageUrl='<%# "~/Uploads/Photos/"+ Eval("CarouselImgPath") %>' style="width:967px; height:371px;"/>
                             </li>
                         </ItemTemplate>
                     </asp:Repeater>
@@ -70,7 +70,7 @@
                 <!--大圖結束-->
                 <div id="buttom01">
                     <a href="#">
-                        <img id="arrowLeft" src="images/buttom01.gif" alt="next" />
+                        <img id="arrowLeft" src="images/buttom01.gif" alt="next"/>
                     </a>
                 </div>
                 <!--小圖開始-->
@@ -123,8 +123,8 @@
 
         <!--------------------------------右邊選單開始---------------------------------------------------->
         <div id="crumb">
-            <a href="#">Home</a> >> <a href="#">Yachts </a>>> 
-    <a href="#">
+            <a href="Index.aspx">Home</a> >> <a href='<%= "Yachts.aspx?ModelId=" + Request.QueryString["ModelId"] %>'>Yachts </a>>> 
+    <a href="<%= "Yachts.aspx?ModelId=" + Request.QueryString["ModelId"] %>">
         <asp:Label ID="Model1" runat="server" Text="Label" Style="color: rgb(52, 169, 212);"></asp:Label>
     </a>
         </div>

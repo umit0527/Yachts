@@ -29,6 +29,8 @@ namespace Yachts.BackEnd
                 //else  //有登入
                 //{
                 //}
+
+                //動態新增欄位
                 ViewState["PendingFields"] = new List<PrincipalField>();
                 ViewState["PendingEditIndex"] = -1;
                 BindPrincipal();
@@ -239,7 +241,7 @@ namespace Yachts.BackEnd
 
             db.ExecuteNonQuery(sql, param);
         }
-        private string SaveImage(FileUpload fu)  //新增圖片的動作核心
+        private string SaveImage(FileUpload fu)  //新增 所有圖片 的動作核心
         {
             if (fu.HasFile)
             {
@@ -254,7 +256,7 @@ namespace Yachts.BackEnd
             }
             return null;
         }
-        private void InsertImg(string modelId)  //新增設計、平面與輪播圖片
+        private void InsertImg(string modelId)  //新增 設計、平面與輪播圖片
         {
                 // 圖片儲存檔名
                 string interiorImgPath = SaveImage(FUInteriorImg);
@@ -330,7 +332,7 @@ namespace Yachts.BackEnd
                 }
             }
         }
-        private void InsertFile(string modelId)  //新增檔案上傳
+        private void InsertFile(string modelId)  //新增 檔案下載
         {
             var uploadFiles = FileUpload1.PostedFiles;
 
@@ -351,7 +353,7 @@ namespace Yachts.BackEnd
                         // 實際儲存檔案到 uploads 資料夾
                         file.SaveAs(fullPath);
 
-                        string sql = @"INSERT INTO Downloads (ModelId, FilePath,  CreatedAt)
+                        string sql = @"INSERT INTO YachtsDownloads (ModelId, FilePath,  CreatedAt)
                            VALUES  (@ModelId, @FilePath, @CreatedAt)
                           ";
 
@@ -400,11 +402,13 @@ namespace Yachts.BackEnd
                 Response.Write("<script>alert('請輸入船型名字與型號');</script>");
                 return;
             }
+            //型號是否為數字
             else if (!int.TryParse(modelNum, out _))
             {
                 Response.Write("<script>alert('型號請輸入數字');</script>");
                 return;
             }
+            //驗證標籤
             else if (string.IsNullOrWhiteSpace(modelLabel))
             {
                 Response.Write("<script>alert('請選擇標籤');</script>");

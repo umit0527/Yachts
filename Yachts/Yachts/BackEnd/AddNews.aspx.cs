@@ -26,9 +26,11 @@ namespace Yachts.BackEnd
                 //{
                 //}
                 BindCategoryList();
+                
 
                 //限制上傳檔案為圖片
-                FileUpload1.Attributes["accept"] = "image/*";
+                FUCoverPath.Attributes["accept"] = "image/*";
+                
             }
         }
 
@@ -63,7 +65,41 @@ namespace Yachts.BackEnd
                 CategoryList.Items.Insert(0, new ListItem("請選擇種類", ""));
             }
         }
+        private void InsertDownloadsFile(string newsId)  //新增 檔案下載
+        {
+            var uploadFiles = FUDownloadsFile.PostedFiles;
 
+            //如果有上傳檔案
+            if (uploadFiles != null)
+            {
+                foreach (HttpPostedFile file in uploadFiles)
+                {
+                    if (file != null && file.ContentLength > 0)
+                    {
+                        string extension = Path.GetExtension(file.FileName);  //取得副檔名
+                        string fileName = DateTime.Now.Ticks.ToString() + extension;
+                        string uploadsFolder = Server.MapPath("~/Uploads/"); // 取得實體路徑
+                        Directory.CreateDirectory(uploadsFolder); // 確保資料夾存在         
+                        string fullPath = Path.Combine(uploadsFolder, fileName);  //組合成完整檔案路徑
+
+                        // 實際儲存檔案到 uploads 資料夾
+                        file.SaveAs(fullPath);
+
+                        string sql = @"INSERT INTO NewsDownloads (NewsId, FilePath,  CreatedAt)
+                           VALUES  (@NewsId, @FilePath, @CreatedAt)
+                          ";
+
+                        var param = new Dictionary<string, object>()
+            {
+                { "@NewsId", newsId },
+                { "@FilePath", fileName ?? "" },
+                { "@CreatedAt",DateTime.Now}
+            };
+                        db.ExecuteNonQuery(sql, param);
+                    }
+                }
+            }
+        }
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             string content = CKEditor1.Text.Trim();
@@ -102,8 +138,8 @@ namespace Yachts.BackEnd
 
             // 插入新聞相簿資料（含封面路徑）
             string sqlAlbum = @"INSERT INTO News (CreatedAt, CategoryId, Title, CoverPath, content ,Sticky)
-                                VALUES ( @CreatedAt, @CategoryId, @Title, @CoverPath, @content ,@Sticky);
-                               ";
+                                VALUES ( @CreatedAt, @CategoryId, @Title, @CoverPath, @content ,@Sticky);             
+                                SELECT SCOPE_IDENTITY();";
 
             var albumParams = new Dictionary<string, object>()
     {
@@ -115,11 +151,14 @@ namespace Yachts.BackEnd
         { "@Sticky",sticky}
     };
 
-            int resultAlbum = db.ExecuteNonQuery(sqlAlbum, albumParams);
+            object resultAlbum = db.ExecuteScalar(sqlAlbum, albumParams);
 
+            string newsId = resultAlbum?.ToString();
 
-            if (resultAlbum > 0)
+            if (!string.IsNullOrEmpty(newsId))
             {
+                InsertDownloadsFile(newsId);
+
                 Response.Write("<script>alert('新增送出！'); window.location='News-B.aspx';</script>");
             }
             else
@@ -127,7 +166,6 @@ namespace Yachts.BackEnd
                 Response.Write("<script>alert('新增失敗，請稍後再試！');</script>");
             }
         }
-
         protected void btnCancel_Click(object sender, EventArgs e)
         {
             Response.Redirect("News-B.aspx");

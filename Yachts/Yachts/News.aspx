@@ -1,7 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site-F.Master" AutoEventWireup="true" CodeBehind="News.aspx.cs" Inherits="Yachts.News" %>
+<%@ Register TagPrefix="uc1" TagName="Pagination" Src="~/Pagination.ascx" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="/css/homestyle2.css?v=1" rel="stylesheet" type="text/css" />
+    <link href="/css/homestyle2.css" rel="stylesheet" type="text/css" />
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
     <!--遮罩-->
@@ -41,8 +44,8 @@
 
         <!--------------------------------右邊選單開始---------------------------------------------------->
         <div id="crumb">
-            <a href="#">Home</a> >> <a href="#">Company </a>>> 
-        <a href="#">
+            <a href="Index.aspx">Home</a> >> <a href='<%= "News.aspx?CategoryId=" + Request.QueryString["CategoryId"] %>'>News </a>>> 
+        <a href="<%= "News.aspx?CategoryId=" + Request.QueryString["CategoryId"] %>">
             <asp:Label ID="Label1" runat="server" Text="Label" Style="color: rgb(52, 169, 212);"></asp:Label>
         </a>
         </div>
@@ -65,7 +68,7 @@
                                     </div>
                                     <div class="">
                                         <div>
-                                            <span><%# Eval("CreatedAt") %></span>
+                                            <span><%# Eval("CreatedAt", "{0:yyyy/MM/dd}") %></span>
                                         </div>
                                         <div>
                                             <p><%# Eval("Title") %></p>
@@ -76,6 +79,11 @@
                         </ItemTemplate>
                     </asp:Repeater>
                 </div>
+            </div>
+            <%--分頁開始--%>
+            <div class="align-items-center">
+                <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                <uc1:pagination runat="server" id="Pagination" />
             </div>
             <!--------------------------------內容結束------------------------------------------------------>
         </div>
