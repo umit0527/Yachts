@@ -19,7 +19,6 @@ namespace Yachts.BackEnd
 
             }
         }
-
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             string countryName = CountryName.Text.Trim();
@@ -55,7 +54,11 @@ namespace Yachts.BackEnd
                 int result = db.ExecuteNonQuery(sql, param);
                 if (result > 0)
                 {
-                    Response.Write("<script>alert('新增成功！'); window.location=('Dealers-B.aspx');</script>");
+                    Response.Write("<script>alert('新增成功！'); window.location=('Country-B.aspx');</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('新增失敗，請稍後再試！'); window.location=('Country-B.aspx');</script>");
                 }
             }
             else

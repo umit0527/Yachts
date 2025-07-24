@@ -19,31 +19,9 @@ namespace Yachts.BackEnd
         {
             if (!IsPostBack)
             {
-                //if (Session["userid"] == null)
-                //{
-                //    string logout = "<script>alert('請先登入'); window.location='LoginB.aspx';</script>";
-                //    Response.Write(logout);
-                //}
-                //else  //有登入
-                //{
-                //}
                 BindCountryList();
-                //BindCityList(0);  //預設不選擇任何國家
             }
         }
-
-
-        //protected void Button1_Click(object sender, EventArgs e)  //登出
-        //{
-        //    if (Session["userid"] != null)  //有登入的話，則有登出按鈕
-        //    {
-        //        Session.Clear();       // 清除所有 Session 資料
-        //        Session.Abandon();     // 結束目前的 Session
-        //        string logout = "<script>alert('登出成功'); window.location='LoginB.aspx';</script>";
-        //        Response.Write(logout);
-        //        Response.End();
-        //    }
-        //}
 
         private void BindCountryList()  // "國家"下拉式選單
         {
@@ -129,7 +107,11 @@ namespace Yachts.BackEnd
                 if (result > 0)
                 {
                     // 提示用戶
-                    Response.Write("<script>alert('成功送出！'); window.location='Dealers-B.aspx';</script>");
+                    Response.Write("<script>alert('新增成功！'); window.location='Dealers-B.aspx';</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('新增失敗，請稍後再試！'); window.location='Dealers-B.aspx';</script>");
                 }
             }
             else

@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site-F.Master" AutoEventWireup="true" CodeBehind="Dealers.aspx.cs" Inherits="Yachts.FrontEnd.Dealers" %>
+<%@ Register TagPrefix="uc1" TagName="Pagination" Src="~/Pagination.ascx" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<link href="/css/homestyle.css" rel="stylesheet" type="text/css" />
+<link href="/css/homestyle2.css" rel="stylesheet" type="text/css" />
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -42,32 +43,30 @@
 
 
         <!--------------------------------右邊選單開始---------------------------------------------------->
-        <div id="crumb"><a href="#">Home</a> >> <a href="#">Dealers </a>>> 
-            <a href="#">
+        <div id="crumb"><a href="Index.aspx">Home</a> >> <a href="Dealers.aspx">Dealers</a>>> 
+            <a href="Dealers.aspx?CountryId=<%= Request.QueryString["CountryId"] %>">
                 <asp:Label ID="Label1" runat="server" Text="Label" style="color:rgb(52, 169, 212);"></asp:Label>
             </a></div>
         <div class="right">
             <div class="right1">
-                <div class="title"><span><asp:Label ID="Label2" runat="server" Text="Label" style="color:rgb(52, 169, 212);"></asp:Label></span></div>
+                <div class="title"><asp:Label ID="Label2" runat="server" Text="Label" style="color:rgb(52, 169, 212);"></asp:Label></div>
 
                 <!--------------------------------內容開始---------------------------------------------------->
                 <asp:Repeater ID="rptContent" runat="server">
                     <ItemTemplate>
-                        <div style="margin: 5px; padding: 10px; border-bottom-width: 1px; border-bottom-color: #CCCCCC; border-bottom-style: dashed; float: left;">
+                        <div style=" padding:10px 0px; border-bottom-width: 1px; border-bottom-color: #CCCCCC; border-bottom-style: dashed; float: left;">
                             <p><%# Eval("content") %></p>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
-
-                <%--分頁開始--%>
-                <div class="pagenumber">| <span>1</span> | <a href="#">2</a> | <a href="#">3</a> | <a href="#">4</a> | <a href="#">5</a> |  <a href="#">Next</a>  <a href="#">LastPage</a></div>
-                <div class="pagenumber1">Items：<span>89</span>  |  Pages：<span>1/9</span></div>
-                <%--分頁結束--%>
             </div>
-
             <!--------------------------------內容結束------------------------------------------------------>
-        </div>
-
+        
+        <%--分頁開始--%>
+<div class="align-items-center">
+    <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+    <uc1:pagination runat="server" id="Pagination" />
+</div></div>
         <!--------------------------------右邊選單結束---------------------------------------------------->
     </div>
 

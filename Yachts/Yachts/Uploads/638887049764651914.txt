@@ -1,0 +1,149 @@
+<%@ Page Title="" Language="C#" MasterPageFile="~/BackEnd/Site-B.Master" AutoEventWireup="true" CodeBehind="EditYachts-B.aspx.cs" Inherits="Yachts.BackEnd.EditYachts_B" %>
+<%@ Register Assembly="CKEditor.NET" Namespace="CKEditor.NET" TagPrefix="ckeditor" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+
+    <a href="Yachts-B.aspx" class="btn btn-secondary mb-3">← 回上一頁</a>
+
+    <!-- 船型基本資料 -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3 class="card-title">船型基本資料</h3>
+        </div>
+        <div class="card-body">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="ModelName">船名</label>
+                    <asp:TextBox ID="ModelName" runat="server" CssClass="form-control" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="ModelNum">型號</label>
+                    <asp:TextBox ID="ModelNum" runat="server" CssClass="form-control" />
+                </div>
+                <div class="form-group col-md-4">
+                    <label>標籤</label><br />
+                    <asp:RadioButtonList ID="rblModelLabel" runat="server" RepeatDirection="Horizontal" CssClass="form-check">
+                        <asp:ListItem Text="Genaral" />
+                        <asp:ListItem Text="New Design" />
+                        <asp:ListItem Text="New Building" />
+                    </asp:RadioButtonList>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 船型介紹與參數 -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3 class="card-title">介紹與設計參數</h3>
+        </div>
+        <div class="card-body">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>介紹</label>
+                    <asp:TextBox ID="Introduce" runat="server" TextMode="MultiLine" CssClass="form-control" Rows="10"></asp:TextBox>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>L.O.A.</label>
+                    <asp:TextBox ID="LOA" runat="server" CssClass="form-control" />
+                    <label>L.W.L.</label>
+                    <asp:TextBox ID="LWL" runat="server" CssClass="form-control" />
+                    <label>Beam</label>
+                    <asp:TextBox ID="Beam" runat="server" CssClass="form-control" />
+                    <label>Draft (Fin Keel)</label>
+                    <asp:TextBox ID="Draft" runat="server" CssClass="form-control" />
+                    <label>Displacement</label>
+                    <asp:TextBox ID="Displacement" runat="server" CssClass="form-control" />
+                    <label>Ballast (Fin Keel)</label>
+                    <asp:TextBox ID="Ballast" runat="server" CssClass="form-control" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 圖片與檔案 -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3 class="card-title">圖片與檔案上傳</h3>
+        </div>
+        <div class="card-body">
+            <div class="form-row">
+                <!-- 設計圖 -->
+                <div class="form-group col-md-4">
+                    <label>設計圖</label>
+                    <asp:FileUpload ID="FUInteriorImg" runat="server" CssClass="form-control-file" />
+                    <br />
+                    <asp:Image ID="InteriorImg" runat="server" CssClass="img-thumbnail w-100" Style="max-width: 300px;" />
+                </div>
+                <!-- 平面圖1 -->
+                <div class="form-group col-md-4">
+                    <label>平面圖1</label>
+                    <asp:FileUpload ID="FUDeckImg1" runat="server" CssClass="form-control-file" />
+                    <br />
+                    <asp:Image ID="DeckImg1" runat="server" CssClass="img-thumbnail w-100" Style="max-width: 300px;" />
+                </div>
+                <!-- 平面圖2 -->
+                <div class="form-group col-md-4">
+                    <label>平面圖2</label>
+                    <asp:FileUpload ID="FUDeckImg2" runat="server" CssClass="form-control-file" />
+                    <br />
+                    <asp:Image ID="DeckImg2" runat="server" CssClass="img-thumbnail w-100" Style="max-width: 300px;" />
+                </div>
+            </div>
+
+            <hr />
+
+            <!-- 檔案下載 -->
+            <label>附加檔案上傳</label>
+            <asp:FileUpload ID="FileUpload1" runat="server" AllowMultiple="true" CssClass="form-control-file mb-2" />
+            <asp:Repeater ID="rptEditFiles" runat="server" OnItemCommand="rptEditFiles_ItemCommand">
+                <ItemTemplate>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <%# System.IO.Path.GetFileName(Eval("FilePath").ToString()) %>
+                        <asp:LinkButton ID="btnDeleteFile" runat="server" CommandName="DeleteFile" CommandArgument='<%# Eval("Id") %>' CssClass="btn btn-danger btn-sm" OnClientClick="return confirm('確定要刪除這個檔案嗎？');">刪除</asp:LinkButton>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+        </div>
+    </div>
+
+    <!-- 輪播圖 -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3 class="card-title">輪播圖</h3>
+        </div>
+        <div class="card-body">
+            <asp:FileUpload ID="FUCarouselImgPath" runat="server" AllowMultiple="true" CssClass="form-control-file mb-3" />
+            <div class="row">
+                <asp:Repeater ID="rptCarouselImgs" runat="server" OnItemCommand="btnDeleteCarouselImg">
+                    <ItemTemplate>
+                        <div class="col-3 text-center mb-3">
+                            <img src='<%# ResolveUrl("/Uploads/Photos/") + Eval("CarouselImgPath") %>' class="img-thumbnail" style="max-width: 100%;" />
+                            <asp:LinkButton ID="btnDeleteCarouselImg" runat="server" Text="刪除" CommandName="DeleteCarouselImg" CommandArgument='<%# Eval("Id") %>' CssClass="btn btn-sm btn-danger mt-2" OnClientClick="return confirm('確定要刪除這張圖片嗎？');" />
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+            </div>
+        </div>
+    </div>
+
+    <!-- 詳細規格 -->
+    <div class="card mb-4">
+        <div class="card-header">
+            <h3 class="card-title">詳細規格</h3>
+        </div>
+        <div class="card-body">
+            <ckeditor:CKEditorControl ID="CKEditor1" runat="server" BasePath="~/Scripts/ckeditor/" Height="500" />
+        </div>
+    </div>
+
+    <!-- 按鈕 -->
+    <div class="text-center mb-5">
+        <asp:Button ID="btnSubmit" runat="server" Text="送 出" OnClick="btnSubmit_Click" CssClass="btn btn-primary mr-2" />
+        <asp:Button ID="btnCancel" runat="server" Text="取 消" OnClick="btnCancel_Click" CssClass="btn btn-secondary" />
+    </div>
+
+</asp:Content>

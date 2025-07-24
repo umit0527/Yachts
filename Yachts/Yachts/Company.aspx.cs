@@ -19,6 +19,22 @@ namespace Yachts
                 BindContent();
                 BindCategory();
 
+                string categoryId = Request.QueryString["CategoryId"];
+
+                // 如果沒有指定種類，預設導向有資料(第一筆)的種類
+                if (string.IsNullOrEmpty(categoryId))
+                {
+                    // 從資料庫查目前存在的第一筆資料
+                    string sql = @"SELECT TOP 1 Id FROM Company ORDER BY Id";
+                    DataTable dt = db.SearchDB(sql);
+
+                    if (dt.Rows.Count > 0)
+                    {
+                        string defaultId = dt.Rows[0]["Id"].ToString();
+                        Response.Redirect("Company.aspx?CategoryId=" + defaultId);
+                        return;
+                    }
+                }
             }
         }
         private void BindContent()  //顯示內容的Repeater
@@ -27,7 +43,7 @@ namespace Yachts
 
             if (!string.IsNullOrEmpty(categoryId))
             {
-                string sql = @"select c.[content], c.CreatedAt , c.Id, c.UpdatedAt, c.categoryId,
+                string sql = @"select c.[content], c.CreatedAt , c.Id, c.UpdatedAt, c.categoryId, Title,
                                       cc.Name as CategoryName
                                from Company c
                                join CompanyCategory cc on c.CategoryId =cc.Id
