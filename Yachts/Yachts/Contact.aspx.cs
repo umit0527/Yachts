@@ -21,10 +21,9 @@ namespace Yachts.FrontEnd
             if (!IsPostBack)
             {
                 BindCountryList();
-                BindBrochureList();
+                BindModelList();
             }
         }
-
         private void BindCountryList()  // "國家"下拉式選單
         {
             DBHelper db = new DBHelper();
@@ -46,24 +45,24 @@ namespace Yachts.FrontEnd
             }
         }
 
-        private void BindBrochureList()  // "船型"下拉式選單
+        private void BindModelList()  // "船型"下拉式選單
         {
             DBHelper db = new DBHelper();
             string sql = @"select Id, (RTRIM(Name) + ' '+CONVERT(varchar, Number)) as DisplayName
-                           from Brochure 
+                           from Model
                            order by Name desc, Number";
 
             DataTable dt = db.SearchDB(sql);
 
             if (dt.Rows.Count > 0)
             {
-                BrochureList.DataSource = dt;
-                BrochureList.DataTextField = "DisplayName";   // 顯示名稱
-                BrochureList.DataValueField = "Id";  //抓取對應 ID 以便寫進資料庫
-                BrochureList.DataBind();
+                ModelList.DataSource = dt;
+                ModelList.DataTextField = "DisplayName";   // 顯示名稱
+                ModelList.DataValueField = "Id";  //抓取對應 ID 以便寫進資料庫
+                ModelList.DataBind();
 
                 // 加入提示選項
-                BrochureList.Items.Insert(0, new ListItem("請選擇型號", ""));
+                ModelList.Items.Insert(0, new ListItem("請選擇型號", ""));
             }
         }
 
@@ -86,7 +85,7 @@ namespace Yachts.FrontEnd
         }
 
         private void SendEmail(string userName, string userEmail, string formContent, string phone,
-                               string country, string brochure)
+                               string country, string modelId)
         {
             try
             {
@@ -101,7 +100,7 @@ namespace Yachts.FrontEnd
                                $"我們已收到您的諮詢，相關資訊如下：\r\n" +
                                $"• 聯絡電話：{phone}\r\n" +
                                $"• 所在國家：{country}\r\n" +
-                               $"• 感興趣的船型：{brochure}\r\n" +
+                               $"• 感興趣的船型：{modelId}\r\n" +
                                $"• 您的留言：{formContent}\r\n\r\n" +
                                $"我們的專業團隊將在 24 小時內與您聯繫。\r\n\r\n" +
                                $"此致\r\n" +
@@ -124,7 +123,7 @@ namespace Yachts.FrontEnd
                                 $"電子郵件：{userEmail}\r\n" +
                                 $"電話：{phone}\r\n" +
                                 $"國家：{country}\r\n" +
-                                $"感興趣的船型：{brochure}\r\n" +
+                                $"感興趣的船型：{modelId}\r\n" +
                                 $"留言內容：\r\n{formContent}\r\n\r\n" +
                                 $"請儘快與客戶聯繫。\r\n\r\n" +
                                 $"--- 系統自動發送 ---";
@@ -165,15 +164,13 @@ namespace Yachts.FrontEnd
             }
             catch (SmtpException smtpEx)
             {
-                string errorMsg = $"SMTP錯誤: {smtpEx.Message}";
-                Response.Write($"<script>console.error('{errorMsg}');</script>");
-                throw;
+                string detailedError = smtpEx.ToString().Replace("'", "").Replace("\"", "").Replace("\r", "").Replace("\n", "\\n");
+                Response.Write($"<script>alert('SMTP 錯誤：{detailedError}');</script>");
             }
             catch (Exception ex)
             {
-                string errorMsg = $"發送郵件時發生錯誤: {ex.Message}";
-                Response.Write($"<script>console.error('{errorMsg}');</script>");
-                throw;
+                string detailedError = ex.ToString().Replace("'", "").Replace("\"", "").Replace("\r", "").Replace("\n", "\\n");
+                Response.Write($"<script>alert('一般錯誤：{detailedError}');</script>");
             }
         }
 
@@ -186,15 +183,15 @@ namespace Yachts.FrontEnd
             string countryId = CountryList.SelectedValue;
             string countryName = CountryList.SelectedItem.Text;
 
-            string brochureId = BrochureList.SelectedValue;
-            string brochureName = BrochureList.SelectedItem.Text;
+            string modelId = ModelList.SelectedValue;
+            string modelName = ModelList.SelectedItem.Text;
 
             // 除錯：顯示所有欄位值
             Response.Write($"<script>console.log('姓名: [{userName}]');</script>");
             Response.Write($"<script>console.log('信箱: [{userEmail}]');</script>");
             Response.Write($"<script>console.log('電話: [{phone}]');</script>");
             Response.Write($"<script>console.log('國家: [{countryName}]');</script>");
-            Response.Write($"<script>console.log('船型: [{brochureName}]');</script>");
+            Response.Write($"<script>console.log('船型: [{modelName}]');</script>");
             Response.Write($"<script>console.log('內容: [{formContent}]');</script>");
 
             // 修正驗證邏輯 - 檢查必填欄位是否都有填寫
@@ -205,103 +202,123 @@ namespace Yachts.FrontEnd
             if (string.IsNullOrWhiteSpace(userName))
             {
                 isValid = false;
-                errorMessage += "請填寫姓名\\n";
+                errorMessage = "請填寫姓名\\n";
             }
 
             // 驗證電子郵件
             if (string.IsNullOrWhiteSpace(userEmail))
             {
                 isValid = false;
-                errorMessage += "請填寫電子郵件\\n";
+                errorMessage = "請填寫電子郵件\\n";
             }
             else if (!IsValidEmail(userEmail))
             {
                 isValid = false;
-                errorMessage += "電子郵件格式不正確\\n";
+                errorMessage = "電子郵件格式不正確\\n";
             }
 
             // 驗證電話
             if (string.IsNullOrWhiteSpace(phone))
             {
                 isValid = false;
-                errorMessage += "請填寫電話\\n";
+                errorMessage = "請填寫電話\\n";
             }
 
             // 驗證國家 - 修改驗證方式
             if (CountryList.SelectedIndex <= 0) // 使用 SelectedIndex 檢查是否選擇了有效選項
             {
                 isValid = false;
-                errorMessage += "請選擇國家\\n";
+                errorMessage = "請選擇國家\\n";
             }
 
             // 驗證船型 - 修改驗證方式
-            if (BrochureList.SelectedIndex <= 0) // 使用 SelectedIndex 檢查是否選擇了有效選項
+            if (ModelList.SelectedIndex <= 0) // 使用 SelectedIndex 檢查是否選擇了有效選項
             {
                 isValid = false;
-                errorMessage += "請選擇船型\\n";
+                errorMessage = "請選擇船型\\n";
             }
 
             // 驗證內容
             if (string.IsNullOrWhiteSpace(formContent))
             {
                 isValid = false;
-                errorMessage += "請填寫留言內容\\n";
+                errorMessage = "請填寫留言內容\\n";
             }
 
             Response.Write($"<script>console.log('驗證結果: {isValid}');</script>");
             Response.Write($"<script>console.log('錯誤訊息: {errorMessage}');</script>");
 
-            if (isValid)
+            if (String.IsNullOrEmpty(Recaptcha1.Response))
             {
-                try
-                {
-                    //寫進資料庫
-                    try
-                    {
-                        // 嘗試寫入資料庫
-                        SaveContactMessage(userName, userEmail, phone, countryId, brochureId, formContent);
-                    }
-                    catch (Exception ex)
-                    {
-                        // 顯示資料庫錯誤訊息在瀏覽器 console
-                        Response.Write($"<script>console.error('資料庫錯誤: {ex.Message}');</script>");
-                        throw; // 繼續往上拋錯，以便 alert 顯示
-                    }
-
-                    // 寄出信件
-                    SendEmail(userName, userEmail, formContent, phone, countryName, brochureName);
-                    Response.Write("<script>alert('成功送出！'); window.location='Contact-F.aspx';</script>");
-                    Response.End();
-                }
-                catch (Exception ex)
-                {
-                    // 最終 catch：顯示錯誤 alert
-                    Response.Write($"<script>console.error('發送郵件異常: {ex.Message}');</script>");
-                    string errorMsg = ex.Message.Replace("'", "").Replace("\"", "").Replace("\r", "").Replace("\n", "\\n");
-                    Response.Write($"<script>alert('送出失敗，錯誤訊息：{errorMsg}');</script>");
-                }
+                lblMessage.Visible = true;
+                lblMessage.Text = "請勾選「我不是機器人」驗證";
             }
             else
             {
-                Response.Write("<script>alert('" + errorMessage + "');</script>");
-            }   
-        }
+                var result = Recaptcha1.Verify();
+                if (result.Success)
+                {
+                    if (isValid)
+                    {
+                        try
+                        {
+                            //寫進資料庫
+                            try
+                            {
+                                // 嘗試寫入資料庫
+                                SaveContactMessage(userName, userEmail, phone, countryId, modelId, formContent);
+                            }
+                            catch (Exception ex)
+                            {
+                                // 顯示資料庫錯誤訊息在瀏覽器 console
+                                Response.Write($"<script>console.error('資料庫錯誤: {ex.Message}');</script>");
+                                throw; // 繼續往上拋錯，以便 alert 顯示
+                            }
 
+                            // 寄出信件
+                            SendEmail(userName, userEmail, formContent, phone, countryName, modelName);
+                            Response.Write("<script>alert('成功送出！'); window.location='Contact.aspx';</script>");
+                            Response.End();
+                        }
+                        catch (Exception ex)
+                        {
+                            // 最終 catch：顯示錯誤 alert
+                            Response.Write($"<script>console.error('發送郵件異常: {ex.Message}');</script>");
+                            string errorMsg = ex.Message.Replace("'", "").Replace("\"", "").Replace("\r", "").Replace("\n", "\\n");
+                            Response.Write($"<script>alert('送出失敗，錯誤訊息：{errorMsg}');</script>");
+                        }
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('" + errorMessage + "');</script>");
+                    }
+                }
+                else
+                {
+                    lblMessage.Text = "Error(s): ";
+
+                    foreach (var err in result.ErrorCodes)
+                    {
+                        lblMessage.Text = lblMessage.Text + err;
+                    }
+                }
+            }
+        }
         private void SaveContactMessage(string userName, string userEmail, string phone,
-                                string country, string brochure, string formContent)  //寫進資料庫
+                                string country, string modelId, string formContent)  //寫進資料庫
         {
             DBHelper db = new DBHelper();
 
             string sql = @"INSERT INTO Contact
-                   (Name, Email, Phone, CountryId, BrochureId, Comments ,SendedAt)
-                   VALUES (@Name, @Email, @Phone, @CountryId, @BrochureId, @Comments, @SendedAt)";
+                           (Name, Email, Phone, CountryId, ModelId, Comments ,SendedAt)
+                           VALUES (@Name, @Email, @Phone, @CountryId, @ModelId, @Comments, @SendedAt)";
 
             var param = new Dictionary<string, object> {
                 { "@Name", userName },
                 { "@Email", userEmail},
                 { "@Phone", phone},
                 { "@CountryId", country},
-                { "@BrochureId", brochure},
+                { "@ModelId", modelId},
                 { "@Comments", formContent},
                 { "@SendedAt",DateTime.Now}
             };

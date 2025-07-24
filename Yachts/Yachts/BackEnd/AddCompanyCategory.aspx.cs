@@ -18,10 +18,10 @@ namespace Yachts.BackEnd
 
             }
         }
-
         protected void Submit_Click(object sender, EventArgs e)
         {
             string categoryName = CategoryName.Text.Trim();
+
             if (!string.IsNullOrWhiteSpace(categoryName))
             {
                 string checkSql = @"select count(*) 
@@ -55,6 +55,10 @@ namespace Yachts.BackEnd
                 if (result > 0)
                 {
                     Response.Write("<script>alert('新增成功！'); window.location=('CompanyCategory-B.aspx');</script>");
+                }
+                else
+                {
+                    Response.Write("<script>alert('新增失敗，請稍後再試！'); window.location=('CompanyCategory-B.aspx');</script>");
                 }
             }
             else

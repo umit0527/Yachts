@@ -48,12 +48,33 @@
       <HintPath>..\packages\CkeditorForASP.NET.3.6.4.0\lib\CKEditor.NET.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Recaptcha.Web, Version=3.1.0.0, Culture=neutral, PublicKeyToken=c11b6c0ad947566e, processorArchitecture=MSIL">
+      <HintPath>..\packages\RecaptchaNet.3.1.0\lib\net45\Recaptcha.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -108,6 +129,8 @@
     <Content Include="BackEnd\AddCountry.aspx" />
     <Content Include="BackEnd\AddDealer.aspx" />
     <Content Include="BackEnd\AddNews.aspx" />
+    <Content Include="BackEnd\AddNewsCategory.aspx" />
+    <Content Include="BackEnd\AddYachts.aspx" />
     <Content Include="BackEnd\CompanyCategory-B.aspx" />
     <Content Include="BackEnd\Company-B.aspx" />
     <Content Include="BackEnd\Contact-B.aspx" />
@@ -118,9 +141,14 @@
     <Content Include="BackEnd\EditCountry-B.aspx" />
     <Content Include="BackEnd\EditDealers-B.aspx" />
     <Content Include="BackEnd\EditNews-B.aspx" />
+    <Content Include="BackEnd\EditNewsCategory-B.aspx" />
+    <Content Include="BackEnd\EditYachts-B.aspx" />
     <Content Include="BackEnd\Index-B.aspx" />
     <Content Include="BackEnd\Login.aspx" />
     <Content Include="BackEnd\News-B.aspx" />
+    <Content Include="BackEnd\NewsCategory-B.aspx" />
+    <Content Include="BackEnd\Search.aspx" />
+    <Content Include="BackEnd\Yachts-B.aspx" />
     <Content Include="Company.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -147,6 +175,8 @@
     <Content Include="Index.aspx" />
     <Content Include="News.aspx" />
     <Content Include="NewsContent.aspx" />
+    <Content Include="Pagination.ascx" />
+    <Content Include="RecaptchaNet.Readme.txt" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -186,6 +216,11 @@
     <Content Include="Scripts\ckeditor\ckeditor_php4.php" />
     <Content Include="Scripts\ckeditor\ckeditor.php" />
     <Content Include="Scripts\ckeditor\ckeditor.pack" />
+    <Content Include="Yachts.aspx" />
+    <Content Include="YachtsInterior.aspx" />
+    <Content Include="YachtsLayout.aspx" />
+    <Content Include="YachtsSpecification.aspx" />
+    <Content Include="YachtsTest1.aspx" />
     <None Include="Scripts\jquery-3.7.0.intellisense.js" />
     <Content Include="Scripts\ckeditor\ckeditor_source.js" />
     <Content Include="Scripts\ckeditor\config.js" />
@@ -601,6 +636,20 @@
     <Compile Include="BackEnd\AddNews.aspx.designer.cs">
       <DependentUpon>AddNews.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackEnd\AddNewsCategory.aspx.cs">
+      <DependentUpon>AddNewsCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\AddNewsCategory.aspx.designer.cs">
+      <DependentUpon>AddNewsCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\AddYachts.aspx.cs">
+      <DependentUpon>AddYachts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\AddYachts.aspx.designer.cs">
+      <DependentUpon>AddYachts.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackEnd\CompanyCategory-B.aspx.cs">
       <DependentUpon>CompanyCategory-B.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -671,6 +720,20 @@
     <Compile Include="BackEnd\EditNews-B.aspx.designer.cs">
       <DependentUpon>EditNews-B.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackEnd\EditNewsCategory-B.aspx.cs">
+      <DependentUpon>EditNewsCategory-B.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\EditNewsCategory-B.aspx.designer.cs">
+      <DependentUpon>EditNewsCategory-B.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\EditYachts-B.aspx.cs">
+      <DependentUpon>EditYachts-B.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\EditYachts-B.aspx.designer.cs">
+      <DependentUpon>EditYachts-B.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackEnd\Index-B.aspx.cs">
       <DependentUpon>Index-B.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -692,12 +755,33 @@
     <Compile Include="BackEnd\News-B.aspx.designer.cs">
       <DependentUpon>News-B.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackEnd\NewsCategory-B.aspx.cs">
+      <DependentUpon>NewsCategory-B.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\NewsCategory-B.aspx.designer.cs">
+      <DependentUpon>NewsCategory-B.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackEnd\Site-B.Master.cs">
       <DependentUpon>Site-B.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="BackEnd\Site-B.Master.designer.cs">
       <DependentUpon>Site-B.Master</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\Yachts-B.aspx.cs">
+      <DependentUpon>Yachts-B.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\Yachts-B.aspx.designer.cs">
+      <DependentUpon>Yachts-B.aspx</DependentUpon>
     </Compile>
     <Compile Include="Company.aspx.cs">
       <DependentUpon>Company.aspx</DependentUpon>
@@ -752,6 +836,13 @@
     <Compile Include="NewsContent.aspx.designer.cs">
       <DependentUpon>NewsContent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pagination.ascx.cs">
+      <DependentUpon>Pagination.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pagination.ascx.designer.cs">
+      <DependentUpon>Pagination.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site-F.Master.cs">
       <DependentUpon>Site-F.Master</DependentUpon>
@@ -773,6 +864,41 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Yachts.aspx.cs">
+      <DependentUpon>Yachts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yachts.aspx.designer.cs">
+      <DependentUpon>Yachts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YachtsInterior.aspx.cs">
+      <DependentUpon>YachtsInterior.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YachtsInterior.aspx.designer.cs">
+      <DependentUpon>YachtsInterior.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YachtsLayout.aspx.cs">
+      <DependentUpon>YachtsLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YachtsLayout.aspx.designer.cs">
+      <DependentUpon>YachtsLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YachtsSpecification.aspx.cs">
+      <DependentUpon>YachtsSpecification.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YachtsSpecification.aspx.designer.cs">
+      <DependentUpon>YachtsSpecification.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YachtsTest1.aspx.cs">
+      <DependentUpon>YachtsTest1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YachtsTest1.aspx.designer.cs">
+      <DependentUpon>YachtsTest1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

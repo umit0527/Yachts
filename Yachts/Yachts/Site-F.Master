@@ -9,58 +9,90 @@
     <script type="text/javascript">
 
         $(function () {
-            // 先取得 #abgne-block-20110111 , 必要參數及輪播間隔
             var $block = $('#abgne-block-20110111'),
-                timrt, speed = 4000;
+                timer,
+                speed = 4000;
 
-            // 幫 #abgne-block-20110111 .title ul li 加上 hover() 事件
-            var $li = $('.title ul li', $block).hover(function () {
-                // 當滑鼠移上時加上 .over 樣式
+            var $li = $('.title ul li', $block);
+            var $items = $('.bannerimg li a', $block);
+
+            // 初始化：先清除所有 .on ，只給第一個加上 .on
+            $li.removeClass('on').eq(0).addClass('on');
+            $items.removeClass('on').eq(0).addClass('on');
+            $('.bd li.info', $block).removeClass('on').eq(0).addClass('on');
+
+            // hover 加 .over ，移出移除 .over
+            $li.hover(function () {
                 $(this).addClass('over').siblings('.over').removeClass('over');
             }, function () {
-                // 當滑鼠移出時移除 .over 樣式
                 $(this).removeClass('over');
             }).click(function () {
-                // 當滑鼠點擊時, 顯示相對應的 div.info
-                // 並加上 .on 樣式
-                var $this = $(this);
-                $this.add($('.bd li.info', $block).eq($this.index())).addClass('on').siblings('.on').removeClass('on');
+                var index = $(this).index();
+
+                // 移除所有 .on
+                $li.removeClass('on');
+                $items.removeClass('on');
+                $('.bd li.info', $block).removeClass('on');
+
+                // 只給點擊的加 .on
+                $li.eq(index).addClass('on');
+                $items.eq(index).addClass('on');
+                $('.bd li.info', $block).eq(index).addClass('on');
             });
 
-            // 幫 $block 加上 hover() 事件
+            $items.hover(function () {
+                $(this).addClass('over').siblings('.over').removeClass('over');
+            }, function () {
+                $(this).removeClass('over');
+            }).click(function () {
+                var index = $(this).index();
+
+                // 移除所有 .on
+                $li.removeClass('on');
+                $items.removeClass('on');
+                $('.bd li.info', $block).removeClass('on');
+
+                // 只給點擊的加 .on
+                $li.eq(index).addClass('on');
+                $items.eq(index).addClass('on');
+                $('.bd li.info', $block).eq(index).addClass('on');
+            });
+
+            // 停止和啟動計時器
             $block.hover(function () {
-                // 當滑鼠移上時停止計時器
                 clearTimeout(timer);
             }, function () {
-                // 當滑鼠移出時啟動計時器
-                var timer = setTimeout(move, speed);
+                timer = setTimeout(move, speed);
             });
 
-            // 控制輪播
+            // 輪播邏輯
             function move() {
                 var _index = $('.title ul li.on', $block).index();
                 _index = (_index + 1) % $li.length;
-                $li.eq(_index).click();
+
+                // 移除所有 .on
+                $li.removeClass('on');
+                $items.removeClass('on');
+                $('.bd li.info', $block).removeClass('on');
+
+                // 加上當前 .on
+                $li.eq(_index).addClass('on');
+                $items.eq(_index).addClass('on');
+                $('.bd li.info', $block).eq(_index).addClass('on');
 
                 timer = setTimeout(move, speed);
             }
 
-            // 啟動計時器
+            // 啟動輪播計時器
             timer = setTimeout(move, speed);
         });
 
-
-        $(document).ready(function () {
-            $('.slideshow').cycle({
-                fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
-            });
-        });
     </script>
     <!--[if lt IE 7]>
 <script type="text/javascript" src="javascript/iepngfix_tilebg.js"></script>
 <![endif]-->
     <!--begin:Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
     <!--end:Bootstrap-->
     <%--<link href="css/style.css" rel="stylesheet" type="text/css" />--%>
     <link href="css/reset.css" rel="stylesheet" type="text/css" />
@@ -74,18 +106,18 @@
             <div class="contain">
                 <div class="sub">
                     <p>
-                        <a href="index.aspx">Home</a>
+                        <a href="Index.aspx">Home</a>
                     </p>
                 </div>
 
                 <!--------------------------------選單開始---------------------------------------------------->
                 <div class="menu">
                     <ul>
-                        <li class="menuli01"><a href="#">Yachts</a></li>
-                        <li class="menuli02"><a href="#">NEWS</a></li>
-                        <li class="menuli03"><a href="Company.aspx">COMPANY</a></li>
-                        <li class="menuli04"><a href="Dealers.aspx">DEALERS</a></li>
-                        <li class="menuli05"><a href="Contact.aspx">CONTACT</a></li>
+                        <asp:LinkButton ID="LinkButton1" runat="server" href="Yachts.aspx"><li class="menuli01"></li></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton2" runat="server" href="News.aspx"><li class="menuli02"></li></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton3" runat="server" href="Company.aspx"><li class="menuli03"></li></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton4" runat="server" href="Dealers.aspx"><li class="menuli04"></li></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButton5" runat="server" href="Contact.aspx"><li class="menuli05"></li></asp:LinkButton>
                     </ul>
                 </div>
                 <!--------------------------------選單開始結束---------------------------------------------------->
