@@ -70,7 +70,6 @@ body {
 .menu a {
 	color: #F6F6F6;
 	text-decoration: none;
-	display: block;
 	height: 71px;
 }
 .menuli01  {
@@ -115,7 +114,7 @@ body {
 }
 .banner {
 	float: left;
-	width: 966px;
+	width: 984px;
 	padding-left: 19px;
 	margin-top: 19px;
 }
@@ -129,6 +128,10 @@ body {
 	width: 1002px;
 	margin-top: 18px;
 	float: left;
+	top: 0px;
+	left: 0px;
+	position: relative;
+	margin-bottom: 20px;
 }
 .news a {
 	color: #727272;
@@ -150,9 +153,6 @@ body {
 	padding-right: 19px;
 	font-size: 90%;
 }
-.newstitlep2 a:hover {
-}
-
 .newstitlep2 a {
 	color: #02a5b8;
 	text-decoration: none;
@@ -167,10 +167,11 @@ body {
 .news li {
 	float: left;
 	padding-left: 22px;
+	width: 329px;
 }
 .newstop {
-	top: 588px;
-	left: 22px;
+	top: 13px;
+	left: 13px;
 	position: absolute;
 	z-index:1;
 }
@@ -240,14 +241,13 @@ body {
 	color: #009DB3;
 	float: left;
 	padding-left: 27px;
-	padding-top: 45px;
+	padding-top: 23px;
 }
 .footer01 {
 	float: right;
 	width: 600px;
 	text-align: right;
 	padding-right: 9px;
-	margin-top: 20px;
 	color: #727272;
 	line-height: 150%;
 }
@@ -270,7 +270,7 @@ body {
 /*換圖*/
 .banner {
 	float: left;
-	width: 966px;
+	width: 984px;
 	margin-top: 19px;
 	padding-left: 18px;
 	height: 424px;
@@ -296,6 +296,14 @@ body {
 	overflow: hidden;
 	right: 27px;
 }
+.bannerimg ul {
+    display: flex;
+    /* justify-content: flex-end;  */
+    gap: 9px; /* 原本是 padding-left: 9px */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 .bannerimg li {
 	float: right;
 	padding-left: 9px;
@@ -314,6 +322,11 @@ body {
 	width: 99px;
 	overflow: hidden;
 }
+.bannerimg_p img{
+	height: 100%;
+	margin: 0 auto;
+	display: block;
+}	
 .bannerimg  li  a {
 	background-image: url(../images/changbg1.gif);
 	background-repeat: no-repeat;
@@ -323,16 +336,17 @@ body {
 	height: 70px;
 	display: block;
 }
-.bannerimg       li       a:hover   {
-	background-image: url(../images/changbg.gif);
+.bannerimg       li       a:hover,
+.bannerimg li a.on    {
+	background-image: url(../images/changbg.png);
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	float: left;
 	height: 70px;
 	width: 103px;
 }
-.on    {
-	background-image: url(../images/changbg.gif);
+/* .on    {
+	background-image: url(../images/changbg.png);
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	width: 103px;
@@ -340,11 +354,11 @@ body {
 	display: block;
 	float: left;
 	z-index: 15;
-}
+} */
 .wordtitle {
 	position: absolute;
 	left: 50px;
-	top: 468px;
+	top: 455px;
 	font-size: 160%;
 	color: #FFFFFF;
 	z-index: 15;

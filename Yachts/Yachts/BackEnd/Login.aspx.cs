@@ -6,16 +6,22 @@ using System.Web;
 using System.Web.Configuration;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Yachts.Helper;
 
 namespace Yachts.BackEnd
 {
     public partial class Login : System.Web.UI.Page
     {
+    DBHelper db=new DBHelper();
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.Cookies["RememberMe"] != null)
+            {
+                string rememberedAccount = Request.Cookies["RememberMe"]["Account"];
+                Account.Text = rememberedAccount;
+                chkRememberMe.Checked = true;
+            }
         }
-
         protected void Submit_Click(object sender, EventArgs e)
         {
             //account2去接輸入的帳號
@@ -29,7 +35,7 @@ namespace Yachts.BackEnd
             {
                 //建立指令本身
                 string sql = @"select Id, Name 
-                               from [User] 
+                               from Administrator 
                                where Account = @Account AND Password = @Password";
                 //建立指令物件，將連線與指令綁定
                 SqlCommand command = new SqlCommand(sql, conn);
@@ -44,10 +50,28 @@ namespace Yachts.BackEnd
                 //如果資料獲取完整
                 if (reader.Read())
                 {
-                    //用戶登入成功，Session["userid"]=user表的id，讓其他頁面可以使用，例如新增回覆時需要
-                    Session["userid"] = (int)reader["Id"];
+                    Session["AdminiId"] = (int)reader["Id"];
                     Session["Name"] = reader["Name"].ToString();
-                    Response.Write("<script>alert('登入成功'); window.location='/BackEnd/Index.aspx';</script>");
+
+                    // 如果勾選記住我，儲存帳號進 Cookie
+                    if (chkRememberMe.Checked)
+                    {
+                        HttpCookie cookie = new HttpCookie("RememberMe");
+                        cookie["Account"] = account2;
+                        cookie.Expires = DateTime.Now.AddSeconds(30); //保存時間
+                        Response.Cookies.Add(cookie);
+                    }
+                    else
+                    {
+                        // 沒勾選就清除 Cookie
+                        if (Request.Cookies["RememberMe"] != null)
+                        {
+                            HttpCookie cookie = new HttpCookie("RememberMe");
+                            cookie.Expires = DateTime.Now.AddDays(-1);
+                            Response.Cookies.Add(cookie);
+                        }
+                    }
+                    Response.Write("<script>alert('登入成功'); window.location='/BackEnd/Yachts-B.aspx';</script>");
                 }
                 else
                 {

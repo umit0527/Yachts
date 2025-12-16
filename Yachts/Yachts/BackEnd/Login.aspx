@@ -17,6 +17,20 @@
         name="keywords"
         content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard" />
     <!--end::Primary Meta Tags-->
+    <!--begin::css-->
+    <style>
+    .bg-gradient-dark {
+  background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);
+  opacity: 0.6 !important;
+  position: absolute;
+    background-size: cover;
+    background-position: center center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}</style>
+    <!--end::css-->
     <!--begin::Fonts-->
     <link
         rel="stylesheet"
@@ -44,10 +58,15 @@
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body class="login-page bg-body-secondary">
+<body class="login-page " style="overflow: hidden !important;
+    background-size: cover;
+    background-position: 50%;
+    background-image:url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');">
+    <span class="mask bg-gradient-dark "></span>
+
     <div class="login-box">
         <div class="login-logo">
-            <b>Admin</b>LTE
+            <h1 class="text-light fw-bold position-sticky">Tayana</h1>
         </div>
         <!-- /.login-logo -->
         <div class="card">
@@ -66,8 +85,8 @@
                     <div class="row">
                         <div class="col-8">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                <label class="form-check-label" for="flexCheckDefault">Remember Me </label>
+                                <input class="form-check-input" type="checkbox" value="" id="chkRememberMe" runat="server"/>
+                                <label class="form-check-label" for="chkRememberMe">Remember Me </label>
                             </div>
                         </div>
                         <!-- /.col -->

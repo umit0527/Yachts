@@ -48,19 +48,20 @@
       background: url(../images/non-existing.jpg);
     }
       .ad-gallery .ad-image-wrapper .ad-prev .ad-prev-image, .ad-gallery .ad-image-wrapper .ad-next .ad-next-image {
-	width: 30px;
-	height: 30px;
+	width: 25px;
+	height: 60px;
 	display: none;
 	position: absolute;
-	top: 47%;
+	top: 35%;
 	left: 0;
 	z-index: 101;
-	background-image: url(../images/buttom02.gif);
+	background-image: url(../images/buttom01.gif);
       }
       .ad-gallery .ad-image-wrapper .ad-next .ad-next-image {
-	background: url(../images/buttom01.gif);
-	width: 30px;
-	height: 30px;
+	background: url(../images/buttom02.gif);
+	width: 22px;
+	height: 60px;
+  top: 35%;
 	right: 0;
 	left: auto;
       }
@@ -118,7 +119,7 @@
 	padding-left: 30px;
 	position: absolute;
 	top: 413px;
-	width: 88%;
+	width: 91%;
 	z-index: 200;
   }
     .ad-gallery .ad-forward, .ad-gallery .ad-back {
