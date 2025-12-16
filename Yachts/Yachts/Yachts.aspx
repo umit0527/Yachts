@@ -6,7 +6,7 @@
 
     <!-- JS Libraries -->
     <link rel="stylesheet" type="text/css" href="/css/jquery.ad-gallery.css" />
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <%--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>--%>
     <script type="text/javascript" src="/Scripts/jquery.ad-gallery.js"></script>
     <script type="text/javascript">
         $(function () {
@@ -86,7 +86,6 @@
         <div class="right">
             <div class="right1">
                 <div class="title">
-                    
                         <asp:Label ID="Model2" runat="server" Text="Label" Style="color: rgb(52, 169, 212);"></asp:Label>
                 </div>
                 <!--次選單-->

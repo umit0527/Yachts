@@ -38,36 +38,7 @@
             }
         }
     </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            // 獲取側邊欄和導航欄
-            const sidebar = document.querySelector('.sidebar-wrapper');
-            const navbar = document.querySelector('#navbar');
-
-            // 切換側邊欄的狀態（展開/收起）
-            const toggleSidebar = () => {
-                if (sidebar.classList.contains('collapsed')) {
-                    // 側邊欄收起時，navbar佔滿整個螢幕
-                    navbar.style.left = '0';
-                    navbar.style.width = '100%';
-                } else {
-                    // 側邊欄展開時，navbar推開250px
-                    navbar.style.left = '250px';
-                    navbar.style.width = 'calc(100% - 250px)';
-                }
-            };
-
-            // 監聽點擊漢堡選單按鈕，切換側邊欄收起狀態
-            const sidebarToggleButton = document.querySelector('[data-lte-toggle="sidebar"]');
-            sidebarToggleButton.addEventListener('click', function () {
-                sidebar.classList.toggle('collapsed');  // 切換collapsed類別
-                toggleSidebar();  // 調整navbar的寬度和位置
-            });
-
-            // 頁面加載時，初始化navbar的寬度和位置
-            toggleSidebar();
-        });
-    </script>
+    
     <%--結束：動態調整 Navbar 位置和寬度--%>
 
     <!--begin::Fonts-->
@@ -411,6 +382,37 @@
             <script src="/Scripts/ckeditor/ckeditor.js"></script>
             <!--end:CKEditor-->
 
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    // 獲取側邊欄和導航欄
+                    const sidebar = document.querySelector('.sidebar-wrapper');
+                    const navbar = document.querySelector('#navbar');
+
+                    // 切換側邊欄的狀態（展開/收起）
+                    const toggleSidebar = () => {
+                        if (sidebar.classList.contains('collapsed')) {
+                            // 側邊欄收起時，navbar佔滿整個螢幕
+                            navbar.style.left = '0';
+                            navbar.style.width = '100%';
+                        } else {
+                            // 側邊欄展開時，navbar推開250px
+                            navbar.style.left = '250px';
+                            navbar.style.width = 'calc(100% - 250px)';
+                        }
+                    };
+
+                    // 監聽點擊漢堡選單按鈕，切換側邊欄收起狀態
+                    const sidebarToggleButton = document.querySelector('[data-lte-toggle="sidebar"]');
+                    sidebarToggleButton.addEventListener('click', function () {
+                        sidebar.classList.toggle('collapsed');  // 切換collapsed類別
+                        toggleSidebar();  // 調整navbar的寬度和位置
+                    });
+
+                    // 頁面加載時，初始化navbar的寬度和位置
+                    toggleSidebar();
+                });
+            </script>
+
             <!--begin::Third Party Plugin(OverlayScrollbars)-->
             <script
                 src="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/browser/overlayscrollbars.browser.es6.min.js"
@@ -474,59 +476,7 @@
                 // - MONTHLY SALES CHART -
                 //-----------------------
 
-                const sales_chart_options = {
-                    series: [
-                        {
-                            name: 'Digital Goods',
-                            data: [28, 48, 40, 19, 86, 27, 90],
-                        },
-                        {
-                            name: 'Electronics',
-                            data: [65, 59, 80, 81, 56, 55, 40],
-                        },
-                    ],
-                    chart: {
-                        height: 180,
-                        type: 'area',
-                        toolbar: {
-                            show: false,
-                        },
-                    },
-                    legend: {
-                        show: false,
-                    },
-                    colors: ['#0d6efd', '#20c997'],
-                    dataLabels: {
-                        enabled: false,
-                    },
-                    stroke: {
-                        curve: 'smooth',
-                    },
-                    xaxis: {
-                        type: 'datetime',
-                        categories: [
-                            '2023-01-01',
-                            '2023-02-01',
-                            '2023-03-01',
-                            '2023-04-01',
-                            '2023-05-01',
-                            '2023-06-01',
-                            '2023-07-01',
-                        ],
-                    },
-                    tooltip: {
-                        x: {
-                            format: 'MMMM yyyy',
-                        },
-                    },
-                };
-
-                const sales_chart = new ApexCharts(
-                    document.querySelector('#sales-chart'),
-                    sales_chart_options,
-                );
-                sales_chart.render();
-
+                
                 //---------------------------
                 // - END MONTHLY SALES CHART -
                 //---------------------------

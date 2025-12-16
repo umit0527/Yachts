@@ -2,6 +2,34 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="/css/homestyle2.css" rel="stylesheet" type="text/css" />
+
+        <style>
+        .box5 li {
+	background-image: url(../images/icon006.gif);
+	width:48%;
+	background-position: 2px 8px;
+	background-repeat: no-repeat;
+	padding-left: 10px;
+	display: inline-block;
+	vertical-align: top;
+	padding-bottom: 5px;
+	zoom:1
+;
+}
+        .box5 p{
+            background-image: url(../images/icon008.gif);
+	background-repeat: no-repeat;
+	background-position: 1px 4px;
+	padding-left: 20px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #bdbdbd;
+	color: #068fb0;
+	margin-bottom: 5px;
+	padding-bottom: 2px;
+        }
+    </style>
+
     <!-- JS Libraries -->
     <link rel="stylesheet" type="text/css" href="/css/jquery.ad-gallery.css" />
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>

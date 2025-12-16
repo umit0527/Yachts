@@ -26,7 +26,7 @@
                                         <!--文字開始-->
                                         <div class="wordtitle">
                                             <%# Eval("ModelName") %> <span><%# Eval("ModelNumber") %></span><br />
-                                            <p><%# Eval("ModelLabel") %></p>
+                                            <p>SPECIFICATION SHEET</p>
                                         </div>
                                         <!--文字結束-->
                                     </li>

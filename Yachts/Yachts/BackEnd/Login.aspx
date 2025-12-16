@@ -5,10 +5,10 @@
 <!--begin::Head-->
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AdminLTE 4 | Login Page</title>
+    <title>Tayana | Login</title>
     <!--begin::Primary Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="title" content="AdminLTE 4 | Login Page" />
+    <meta name="title" content="Tayana | Login" />
     <meta name="author" content="ColorlibHQ" />
     <meta
         name="description"
@@ -19,17 +19,18 @@
     <!--end::Primary Meta Tags-->
     <!--begin::css-->
     <style>
-    .bg-gradient-dark {
-  background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);
-  opacity: 0.6 !important;
-  position: absolute;
-    background-size: cover;
-    background-position: center center;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}</style>
+        .bg-gradient-dark {
+            background-image: linear-gradient(195deg, #42424a 0%, #191919 100%);
+            opacity: 0.6 !important;
+            position: absolute;
+            background-size: cover;
+            background-position: center center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
     <!--end::css-->
     <!--begin::Fonts-->
     <link
@@ -58,10 +59,7 @@
 </head>
 <!--end::Head-->
 <!--begin::Body-->
-<body class="login-page " style="overflow: hidden !important;
-    background-size: cover;
-    background-position: 50%;
-    background-image:url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');">
+<body class="login-page " style="overflow: hidden !important; background-size: cover; background-position: 50%; background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');">
     <span class="mask bg-gradient-dark "></span>
 
     <div class="login-box">
@@ -81,21 +79,34 @@
                         <asp:TextBox ID="Password" runat="server" placeholder="Password" TextMode="Password" class="form-control"></asp:TextBox>
                         <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
                     </div>
+                    <div class="text-center">
+                        <asp:Label ID="Label4" Text="text" runat="server" CssClass="text-danger text-center" Visible="false" />
+
+                    </div>
                     <!--begin::Row-->
                     <div class="row">
                         <div class="col-8">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="chkRememberMe" runat="server"/>
+                                <input class="form-check-input" type="checkbox" value="" id="chkRememberMe" runat="server" />
                                 <label class="form-check-label" for="chkRememberMe">Remember Me </label>
                             </div>
                         </div>
                         <!-- /.col -->
                         <div class="col-4">
                             <div class="d-grid gap-2">
-                                <asp:Button ID="Submit" runat="server" Text="Sign In" OnClick="Submit_Click" class="btn btn-primary"/>
+                                <asp:Button ID="btnSignin" runat="server" Text="Sign In" OnClick="btnSignin_Click" class="btn btn-primary" />
                             </div>
                         </div>
+                        <div class="input-group my-3 ms-2 border-bottom" style="width: 325px;"></div>
                         <!-- /.col -->
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="d-grid gap-2">
+                                <asp:Button ID="btnSignup" runat="server" Text="Sign Up" OnClick="btnSignup_Click" class="btn btn-secondary" />
+                            </div>
+                        </div>
                     </div>
                     <!--end::Row-->
                 </form>

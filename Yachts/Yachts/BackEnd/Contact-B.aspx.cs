@@ -14,7 +14,7 @@ namespace Yachts.BackEnd
     public partial class Contact_B : System.Web.UI.Page
     {
         DBHelper db = new DBHelper();
-        private int pageSize = 5; // 每頁顯示幾筆
+        private int pageSize =10; // 每頁顯示幾筆
         int currentPage = 1; // 預設頁碼
         public int CurrentPage { get; set; }
         protected void Page_Load(object sender, EventArgs e)

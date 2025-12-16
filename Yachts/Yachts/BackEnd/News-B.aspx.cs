@@ -43,7 +43,7 @@ namespace Yachts.BackEnd
                            nc.Name as CategoryName
                            from News n 
                            left join NewsCategory nc on n.CategoryId =nc.Id
-                           order by n.Sticky desc ,CategoryName desc, n.CreatedAt desc
+                           order by n.Sticky desc , n.CreatedAt desc
                            OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY
                           ";
             var param = new Dictionary<string, object>

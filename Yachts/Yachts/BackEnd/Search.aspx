@@ -37,7 +37,7 @@
                                     <div class="col-12">
                                         <%-- 介紹 --%>
                                         <p class="card-text pt-2 border-top" style="max-height: 4.5em; overflow: hidden; text-overflow: ellipsis;">
-                                            <p>介紹：</p>
+                                            <p>Introduce：</p>
                                             <%# Eval("content") %>
                                         </p>
                                     </div>
@@ -46,7 +46,7 @@
                                 <div class="row mb-2">
                                     <div class="col-md-6 border-top">
                                         <%-- 尺寸與設計參數 --%>
-                                        <h6 class="pt-2 ">尺寸與設計參數：</h6>
+                                        <h6 class="pt-2 ">Principal Dimension：</h6>
                                         <ul class="list-group list-group-flush mb-3">
                                             <asp:Repeater ID="rptPrincipal" runat="server">
                                                 <ItemTemplate>
@@ -60,7 +60,7 @@
                                     </div>
                                     <div class="col-md-6 border-top">
                                         <%-- 設計圖 --%>
-                                        <h6 class="pt-2 ">設計圖：</h6>
+                                        <h6 class="pt-2 ">Interior Image：</h6>
                                         <div class="text-center mb-3">
                                             <img src="<%# ResolveUrl("/Uploads/Photos/") + Eval("InteriorImgPath") %>" class="img-thumbnail" style="max-width: 300px; height: auto; object-fit: cover;" />
                                         </div>
@@ -70,14 +70,14 @@
                                 <div class="row mb-2 pt-2 border-top">
                                     <div class="col-md-6">
                                         <%-- 平面圖1 --%>
-                                        <h6>平面圖1：</h6>
+                                        <h6>Layout Image 1：</h6>
                                         <div class="text-center mb-3">
                                             <img src="<%# ResolveUrl("/Uploads/Photos/") + Eval("DeckImgPath1") %>" class="img-thumbnail" style="max-width: 300px; height: auto; object-fit: cover;" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <%-- 平面圖2 --%>
-                                        <h6>平面圖2：</h6>
+                                        <h6>Layout Image 2：</h6>
                                         <div class="text-center mb-3">
                                             <img src="<%# ResolveUrl("/Uploads/Photos/") + Eval("DeckImgPath2") %>" class="img-thumbnail" style="max-width: 300px; height: auto; object-fit: cover;" />
                                         </div>
@@ -86,7 +86,7 @@
 
                                 <div class="row mb-2 pt-2 border-top">
                                     <div class="col-12">
-                                        <h6>輪播圖：</h6>
+                                        <h6>Carousel Images：</h6>
                                         <div class="row">
                                             <asp:Repeater ID="rptCarouselImgs" runat="server">
                                                 <ItemTemplate>
@@ -101,7 +101,7 @@
 
                                 <div class="row mb-2 pt-2 border-top">
                                     <div class="col-12">
-                                        <p>檔案下載：</p>
+                                        <p>Downloads：</p>
                                         <asp:Repeater ID="rptFiles" runat="server">
                                             <HeaderTemplate>
                                                 <ul style="list-style: none; padding-left: 0; margin-top: 0.5rem;">
@@ -120,7 +120,7 @@
 
                                 <div class="row mb-2 pt-2 border-top">
                                     <div class="col-12">
-                                        <h6>詳細規格：</h6>
+                                        <h6>Specification：</h6>
                                         <div class="card card-body">
                                             <p class="mb-0"><%# Eval("Specification") %></p>
                                         </div>

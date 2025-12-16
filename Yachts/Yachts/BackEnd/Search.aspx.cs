@@ -28,11 +28,16 @@ namespace Yachts.BackEnd
 
                 if (!string.IsNullOrEmpty(searchQuery))
                 {
-                    pnlYachts.Visible = true;
-                    pnlNews.Visible = true;
                     bool hasYachts = SearchYachts(searchQuery);
                     bool hasNews = SearchNews(searchQuery);
-
+                    if (hasYachts)
+                    {
+                        pnlYachts.Visible = true;
+                    }
+                    if (hasNews)
+                    {
+                        pnlNews.Visible = true;
+                    }
                     if (!hasYachts && !hasNews)
                     {
                         Response.Write("<script>alert('查無資料');</script>");
@@ -67,10 +72,10 @@ SELECT
     (SELECT TOP 1 DeckImgPath1 FROM YachtsLayoutImage WHERE ModelId = m.Id) AS DeckImgPath1,
     (SELECT TOP 1 DeckImgPath2 FROM YachtsLayoutImage WHERE ModelId = m.Id) AS DeckImgPath2,
     (SELECT TOP 1 InteriorImgPath FROM YachtsLayoutImage WHERE ModelId = m.Id) AS InteriorImgPath,
-p.Name AS PrincipalName,
-    p.Value AS PrincipalValue
+(SELECT TOP 1 Name FROM Principal WHERE ModelId = m.Id) AS PrincipalName,
+(SELECT TOP 1 Value FROM Principal WHERE ModelId = m.Id) AS PrincipalValue
+    
 FROM Model m
-LEFT JOIN Principal p ON p.ModelId = m.Id
 WHERE 
     m.Name + ' ' + CONVERT(nvarchar, m.Number) LIKE @input
     OR m.Label LIKE @input
@@ -88,6 +93,7 @@ WHERE
         WHERE p.ModelId = m.Id AND 
               (p.Name LIKE @input OR p.Value LIKE @input)
     )
+order by m.CreatedAt desc
 ";
 
             var param = new Dictionary<string, object> { { "@input", input } };
@@ -164,11 +170,11 @@ WHERE
                     }
                 }
 
-                // 如果 ContentText 也需要參與搜尋，這裡進行程式中的搜尋過濾
+                // 進行程式中的搜尋過濾
                 if (!string.IsNullOrEmpty(search))
                 {
                     var filteredRows = dt.AsEnumerable()
-                    .Where(row => row["ContentText"].ToString().Contains(search) || 
+                    .Where(row => row["ContentText"].ToString().Contains(search) ||
                            row["Title"].ToString().Contains(search));
 
                     if (filteredRows.Any())
@@ -177,7 +183,7 @@ WHERE
                     }
                     else
                     {
-                        // 若無符合條件的資料，可選擇清空或顯示所有資料，視你的需求而定
+                        // 若無符合條件的資料則清空，不顯示資料
                         rptNews.DataSource = null;
                     }
                 }

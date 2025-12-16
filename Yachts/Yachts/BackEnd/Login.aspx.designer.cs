@@ -33,6 +33,15 @@ namespace Yachts.BackEnd
         protected global::System.Web.UI.WebControls.TextBox Password;
 
         /// <summary>
+        /// Label4 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+
+        /// <summary>
         /// chkRememberMe 控制項。
         /// </summary>
         /// <remarks>
@@ -42,12 +51,21 @@ namespace Yachts.BackEnd
         protected global::System.Web.UI.HtmlControls.HtmlInputCheckBox chkRememberMe;
 
         /// <summary>
-        /// Submit 控制項。
+        /// btnSignin 控制項。
         /// </summary>
         /// <remarks>
         /// 自動產生的欄位。
         /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Submit;
+        protected global::System.Web.UI.WebControls.Button btnSignin;
+
+        /// <summary>
+        /// btnSignup 控制項。
+        /// </summary>
+        /// <remarks>
+        /// 自動產生的欄位。
+        /// 若要修改，請將欄位宣告從設計工具檔案移到程式碼後置檔案。
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSignup;
     }
 }

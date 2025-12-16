@@ -39,20 +39,6 @@ namespace Yachts.BackEnd
                 FileUpload1.Attributes["accept"] = "image/*";
             }
         }
-
-
-        //protected void Button1_Click(object sender, EventArgs e)  //登出
-        //{
-        //    if (Session["userid"] != null)  //有登入的話，則有登出按鈕
-        //    {
-        //        Session.Clear();       // 清除所有 Session 資料
-        //        Session.Abandon();     // 結束目前的 Session
-        //        string logout = "<script>alert('登出成功'); window.location='LoginB.aspx';</script>";
-        //        Response.Write(logout);
-        //        Response.End();
-        //    }
-        //}
-
         private void LoadNewsData()
         {
             if (Request.QueryString["Id"] == null)

@@ -47,15 +47,37 @@
     <Reference Include="CKEditor.NET, Version=3.6.4.0, Culture=neutral, PublicKeyToken=e379cdf2f8354999, processorArchitecture=MSIL">
       <HintPath>..\packages\CkeditorForASP.NET.3.6.4.0\lib\CKEditor.NET.dll</HintPath>
     </Reference>
+    <Reference Include="CKFinder">
+      <HintPath>ckfinder\bin\Release\CKFinder.dll</HintPath>
+    </Reference>
+    <Reference Include="Konscious.Security.Cryptography.Argon2, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Konscious.Security.Cryptography.Argon2.1.3.1\lib\net46\Konscious.Security.Cryptography.Argon2.dll</HintPath>
+    </Reference>
+    <Reference Include="Konscious.Security.Cryptography.Blake2, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Konscious.Security.Cryptography.Blake2.1.1.1\lib\net46\Konscious.Security.Cryptography.Blake2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Recaptcha.Web, Version=3.1.0.0, Culture=neutral, PublicKeyToken=c11b6c0ad947566e, processorArchitecture=MSIL">
       <HintPath>..\packages\RecaptchaNet.3.1.0\lib\net45\Recaptcha.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
@@ -136,6 +158,7 @@
     <Content Include="BackEnd\Contact-B.aspx" />
     <Content Include="BackEnd\Country-B.aspx" />
     <Content Include="BackEnd\Dealers-B.aspx" />
+    <Content Include="BackEnd\Dealers.aspx" />
     <Content Include="BackEnd\EditCompany-B.aspx" />
     <Content Include="BackEnd\EditCompanyCategory-B.aspx" />
     <Content Include="BackEnd\EditCountry-B.aspx" />
@@ -144,6 +167,7 @@
     <Content Include="BackEnd\EditNewsCategory-B.aspx" />
     <Content Include="BackEnd\EditYachts-B.aspx" />
     <Content Include="BackEnd\Index-B.aspx" />
+    <Content Include="BackEnd\Register.aspx" />
     <Content Include="BackEnd\Login.aspx" />
     <Content Include="BackEnd\News-B.aspx" />
     <Content Include="BackEnd\NewsCategory-B.aspx" />
@@ -685,6 +709,13 @@
     <Compile Include="BackEnd\Dealers-B.aspx.designer.cs">
       <DependentUpon>Dealers-B.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BackEnd\Dealers.aspx.cs">
+      <DependentUpon>Dealers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\Dealers.aspx.designer.cs">
+      <DependentUpon>Dealers.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BackEnd\EditCompany-B.aspx.cs">
       <DependentUpon>EditCompany-B.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -740,6 +771,13 @@
     </Compile>
     <Compile Include="BackEnd\Index-B.aspx.designer.cs">
       <DependentUpon>Index-B.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BackEnd\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BackEnd\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
     </Compile>
     <Compile Include="BackEnd\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>

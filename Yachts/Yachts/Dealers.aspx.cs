@@ -74,7 +74,7 @@ namespace Yachts.FrontEnd
         private void BindCountry()  //顯示 國家
         {
             string sql = @"select Id, Name 
-                           from Country 
+                           from Country order by Name
                           ";
             DataTable dt = db.SearchDB(sql);
             rptCountry.DataSource = dt;

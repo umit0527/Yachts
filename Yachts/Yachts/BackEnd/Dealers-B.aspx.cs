@@ -27,6 +27,7 @@ namespace Yachts.BackEnd
                 BindRepeater();
                 ShowPagination();
             }
+            Repeater1.ItemDataBound += Repeater1_ItemDataBound;
         }
         private int GetCurrentPage()  //抓取目前分頁
         {
@@ -51,22 +52,33 @@ namespace Yachts.BackEnd
         }
         private void BindRepeater()  //顯示 主要內容Repeater
         {
-            int offset = (currentPage - 1) * pageSize;
+            string sql = @"
+SELECT 
+    c.Id AS CountryId,
+    c.Name AS CountryName,
+    d.Id AS DealerId,
+    d.Content,
+    d.CreatedAt,
+    d.UpdatedAt
+FROM Dealers d
+JOIN Country c ON d.CountryId = c.Id
+ORDER BY c.Name, d.CreatedAt DESC";
 
-            string sql = @"select d.[content], d.CreatedAt , d.Id, d.UpdatedAt,
-                                  Country.Name AS CountryName
-                           from Dealers d 
-                           join Country on d.CountryId =Country.Id
-                           order by CountryName ,d.CreatedAt desc
-                           OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY
-                          ";
-            var param = new Dictionary<string, object>
-            {
-                { "@Offset", offset },
-                { "@PageSize", pageSize }
-            };
-            DataTable dt = db.SearchDB(sql,param);
-            Repeater1.DataSource = dt;
+            DataTable dt = db.SearchDB(sql);
+
+            // 分組：依 CountryId 和 CountryName
+            var grouped = dt.AsEnumerable()
+                .GroupBy(r => new {
+                    CountryId = r.Field<int>("CountryId"),
+                    CountryName = r.Field<string>("CountryName")
+                })
+                .Select(g => new {
+                    CountryId = g.Key.CountryId,
+                    CountryName = g.Key.CountryName,
+                    Dealers = g.CopyToDataTable()
+                }).ToList();
+
+            Repeater1.DataSource = grouped;
             Repeater1.DataBind();
         }
         protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)  //綁定刪除
@@ -80,6 +92,16 @@ namespace Yachts.BackEnd
 
                 string success = "<script>alert('刪除成功'); window.location='Dealers-B.aspx';</script>";
                 Response.Write(success);
+            }
+        }
+        protected void Repeater1_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                var countryGroup = (dynamic)e.Item.DataItem;
+                Repeater rptDealers = (Repeater)e.Item.FindControl("rptDealers");
+                rptDealers.DataSource = countryGroup.Dealers;
+                rptDealers.DataBind();
             }
         }
         protected void btnAddDealer_Click(object sender, EventArgs e)

@@ -21,62 +21,105 @@
                     <div class="row mb-3">
                         <div class="col-md-6">
                             <div class="form-group">
-                                標題：<asp:TextBox ID="txtTitle" runat="server" CssClass="form-control"></asp:TextBox>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group">
-                                種類：<asp:DropDownList ID="CategoryList" runat="server" AutoPostBack="True" CssClass="form-control">
-                                </asp:DropDownList>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="form-group form-check mt-md-4">
-                                置頂 :
-                                <asp:CheckBox ID="chbSticky" runat="server" RepeatDirection="Horizontal"></asp:CheckBox>
-                                <label class="form-check-label" for="chbSticky"></label> <%-- 保持 label for 對應 chbSticky 但不顯示文字，因為文字在外面 --%>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row mb-4">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                封面：<asp:FileUpload ID="FUCoverPath" runat="server" ClientIDMode="Static" CssClass="form-control" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <div>
-                                    檔案下載：
-                                    <asp:FileUpload ID="FUDownloadsFile" runat="server" ClientIDMode="Static" AllowMultiple="true" CssClass="form-control" />
+                                <div class="d-flex">
+                                    <p class="fw-bold">
+                                        標題 *
+                                    </p>
+                                    <asp:RequiredFieldValidator
+                                        ID="RequiredFieldValidator1"
+                                        runat="server"
+                                        ControlToValidate="txtTitle"
+                                        ErrorMessage="請輸入標題"
+                                        ForeColor="Red"
+                                        Display="Dynamic">
+                                    </asp:RequiredFieldValidator>
                                 </div>
+                            <asp:TextBox ID="txtTitle" runat="server" CssClass="form-control"></asp:TextBox>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <div class="d-flex">
+                                <p class="fw-bold">
+                                    種類 *
+                                </p>
+                                <asp:RequiredFieldValidator
+                                    ID="RequiredFieldValidator2"
+                                    runat="server"
+                                    ControlToValidate="CategoryList"
+                                    ErrorMessage="請選擇種類"
+                                    ForeColor="Red"
+                                    Display="Dynamic">
+                                </asp:RequiredFieldValidator>
+                            </div>
+                            <asp:DropDownList ID="CategoryList" runat="server" AutoPostBack="True" CssClass="form-control">
+                            </asp:DropDownList>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group form-check d-flex">
+                            <p class="fw-bold me-2">
+                                置頂 :
+                            </p>
+                            <asp:CheckBox ID="chbSticky" runat="server" RepeatDirection="Horizontal"></asp:CheckBox>
+                            <label class="form-check-label" for="chbSticky"></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div class="d-flex">
+                                <p class="fw-bold">封面 *</p>
+                                <asp:RequiredFieldValidator
+                                    ID="RequiredFieldValidator3"
+                                    runat="server"
+                                    ControlToValidate="FUCoverPath"
+                                    ErrorMessage="請上傳封面"
+                                    ForeColor="Red"
+                                    Display="Dynamic">
+                                </asp:RequiredFieldValidator>
+                            </div>
+                            <asp:FileUpload ID="FUCoverPath" runat="server" ClientIDMode="Static" CssClass="form-control" />
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <div>
+                                <p class="fw-bold">檔案下載</p>
+                                <asp:FileUpload ID="FUDownloadsFile" runat="server" ClientIDMode="Static" AllowMultiple="true" CssClass="form-control" />
                             </div>
                         </div>
                     </div>
-                    <br />
-                    <ckeditor:CKEditorControl ID="CKEditor1" runat="server" BasePath="~/Scripts/ckeditor/" Height="500px" />
-                    <br />
                 </div>
-                <div class="card-footer text-right">
-                    <asp:Button ID="btnSubmit" runat="server" Text="送 出" OnClick="btnSubmit_Click" CssClass="btn btn-warning" />
-                    &nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnCancel" runat="server" Text="取 消" OnClick="btnCancel_Click" CssClass="btn btn-secondary ml-2" />
+                <div class="row">
+                    <div class="col-12">
+                        <br />
+                        <div class="d-flex">
+                            <p class="fw-bold">內容 *</p>
+                            <asp:RequiredFieldValidator
+                                ID="RequiredFieldValidator4"
+                                runat="server"
+                                ControlToValidate="CKEditor1"
+                                ErrorMessage="請輸入內容"
+                                ForeColor="Red"
+                                Display="Dynamic">
+                            </asp:RequiredFieldValidator>
+                        </div>
+                        <ckeditor:CKEditorControl ID="CKEditor1" runat="server" BasePath="~/Scripts/ckeditor/" Height="400px" />
+                        <br />
+                    </div>
                 </div>
             </div>
+            <div class="card-footer text-right">
+                <asp:Button ID="btnSubmit" runat="server" Text="送 出" OnClick="btnSubmit_Click" CssClass="btn btn-warning" />
+                &nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="btnCancel" runat="server" Text="取 消" OnClick="btnCancel_Click" CssClass="btn btn-secondary ml-2" CausesValidation="false"/>
+            </div>
+        </div>
         </div>
     </section>
-
-    <script>
-        window.onload = function () {
-            if (CKEDITOR.instances['<%= CKEditor1.ClientID %>']) {
-                CKEDITOR.instances['<%= CKEditor1.ClientID %>'].destroy(true);
-            }
-
-            CKEDITOR.replace('<%= CKEditor1.ClientID %>', {
-                enterMode: CKEDITOR.ENTER_BR,    // 按 Enter 插入 <br> 而不是 <p>
-                allowedContent: true,            // 保留所有貼上的樣式與標籤
-            });
-        };
-    </script>
-
 </asp:Content>

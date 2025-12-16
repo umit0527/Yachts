@@ -18,14 +18,23 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group mb-3"> 
-                        種類名稱：<asp:TextBox ID="CategoryName" runat="server" CssClass="form-control w-25"></asp:TextBox>
-                    </div>
+                        <p class="fw-bold">
+                        種類名稱：</p><asp:TextBox ID="CategoryName" runat="server" CssClass="form-control w-25"></asp:TextBox>
+                    <asp:RequiredFieldValidator
+    ID="RequiredFieldValidator1"
+    runat="server"
+    ControlToValidate="CategoryName"
+    ErrorMessage="請輸入名稱"
+    ForeColor="Red"
+    Display="Dynamic">
+</asp:RequiredFieldValidator>
+                        </div>
                     <br /> 
                 </div>
                 <div class="card-footer text-right"> 
                     <asp:Button ID="Submit" runat="server" Text="送 出" OnClick="Submit_Click" CssClass="btn btn-warning" />
                     &nbsp;&nbsp;&nbsp;
-                    <asp:Button ID="btnCancel" runat="server" Text="取 消" OnClick="btnCancel_Click" CssClass="btn btn-secondary ml-2" />
+                    <asp:Button ID="btnCancel" runat="server" Text="取 消" OnClick="btnCancel_Click" CssClass="btn btn-secondary ml-2" CausesValidation="false"/>
                 </div>
             </div>
         </div>

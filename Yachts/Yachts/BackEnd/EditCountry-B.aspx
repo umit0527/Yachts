@@ -17,7 +17,7 @@
             <div class="card card-secondary card-outline">
                 <div class="card-body">
                     <div class="form-group">
-                        <label for="CountryName">國家名稱：</label>
+                        <label for="CountryName" class="fw-bold">國家名稱：</label>
                         <asp:TextBox ID="CountryName" runat="server" CssClass="form-control" MaxLength="100"></asp:TextBox>
                     </div>
                     <div class="mt-4">

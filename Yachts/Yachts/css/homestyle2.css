@@ -317,7 +317,7 @@ max-width: 100%;
 	zoom:1
 ;
 }
-.box5  p, .box6 p {
+.box6 p {
 	background-image: url(../images/icon008.gif);
 	background-repeat: no-repeat;
 	background-position: 1px 4px;
@@ -358,7 +358,6 @@ max-width: 100%;
 .box3 p {
 	float: right;
 	padding: 4px;
-	border: 1px solid #a7a7a7;
 }
 
 .box4 p {

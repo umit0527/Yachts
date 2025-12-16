@@ -238,8 +238,8 @@ namespace Yachts.BackEnd
         }
         private void InsertImg(string modelId)  //新增 設計、平面與輪播圖片
         {
-                // 圖片儲存檔名
-                string interiorImgPath = SaveImage(FUInteriorImg);
+            // 圖片儲存檔名
+            string interiorImgPath = SaveImage(FUInteriorImg);
             string deckImg1Path = SaveImage(FUDeckImg1);
             string deckImg2Path = SaveImage(FUDeckImg2);
             string carouselImgPath = SaveImage(FUCarouselImgPath);
@@ -362,9 +362,15 @@ namespace Yachts.BackEnd
                 return;
             }
             //驗證圖片
-            else if (!FUInteriorImg.HasFile || !FUDeckImg1.HasFile || !FUDeckImg2.HasFile || !FUCarouselImgPath.HasFile)
+            else if (!FUInteriorImg.HasFile || !FUDeckImg1.HasFile || !FUDeckImg2.HasFile)
             {
-                Response.Write("<script>alert('請上傳設計圖、平面圖與輪播圖');</script>");
+                Response.Write("<script>alert('請上傳設計圖、平面圖');</script>");
+                return;
+            }
+            //驗證輪播圖
+            else if (!FUCarouselImgPath.HasFile)
+            {
+                Response.Write("<script>alert('請上傳至少一張輪播圖');</script>");
                 return;
             }
             //驗證船型
@@ -386,11 +392,11 @@ namespace Yachts.BackEnd
                 return;
             }
             //驗證基本規格的欄位與值
-            else if ((pendingFields == null || pendingFields.Count == 0))
-            {
-                Response.Write("<script>alert('請填寫欄位名稱與值')</script>");
-                return;
-            }
+            //else if ((pendingFields == null || pendingFields.Count == 0))
+            //{
+            //    Response.Write("<script>alert('請填寫欄位名稱與值')</script>");
+            //    return;
+            //}
 
             // 通過驗證後才開始新增資料
             string modelId = InsertModel(modelName, modelNum, modelLabel);  //新增船型

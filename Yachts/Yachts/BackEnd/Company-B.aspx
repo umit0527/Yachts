@@ -20,45 +20,51 @@
             <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand">
                 <ItemTemplate>
                     <div class="card card-success card-outline mb-3">
-                        <div class="card-body">
-                            <div class="row mb-2">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="card-title mb-1" title='<%# Eval("Title") %>'>
-                                            <%# Eval("Title") %>
-                                        </h5>
-                                        <small class="text-muted"><%# Eval("CategoryName") %> |  <%# Eval("CreatedAt", "{0:yyyy-MM-dd HH:mm}") %></small>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="row mb-2">
-                                <div class="col-12">
-                                    <p class="card-text pt-2 border-top" style="max-height: 4.5em; overflow: hidden; text-overflow: ellipsis;">
-                                        <%# Eval("content") %>
-                                    </p>
-                                </div>
+                            <div class="position-relative p-3 d-flex justify-content-between align-items-center">
+                                <a
+                                    href='<%# "#collapseNews" + Eval("Id") %>'
+                                    data-bs-toggle="collapse"
+                                    aria-expanded="false"
+                                    aria-controls='<%# "collapseNews" + Eval("Id") %>'
+                                    class="stretched-link d-block text-decoration-none text-dark">
+                                    <h5 class="card-title mb-0" title='<%# Eval("Title") %>'>
+                                        <%# Eval("Title") %>
+                                    </h5>
+                                </a>
+                                <small class="text-muted"><%# Eval("CategoryName") %> |  <%# Eval("CreatedAt", "{0:yyyy-MM-dd HH:mm}") %></small>
                             </div>
-
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="mt-2 d-flex justify-content-between">
-                                        <div>
-                                            <a href='<%# "EditCompany-B.aspx?id=" + Eval("Id") %>' class="btn btn-sm btn-success text-white me-1">編 輯</a>
-                                            <asp:LinkButton ID="btnDelete" runat="server"
-                                                CommandName="Delete"
-                                                CommandArgument='<%# Eval("Id") %>'
-                                                CssClass="btn btn-sm btn-secondary"
-                                                OnClientClick="return confirm('確定要刪除嗎？');">
-                                                刪 除
-                                            </asp:LinkButton>
+                            <div id='<%# "collapseNews" + Eval("Id") %>' class="collapse">
+                                <div class="border-top"></div>
+                                <%--內容--%>
+                                <div class="row ">
+                                    <div class="col-12 article-content">
+                                        <div class="card-text px-3 pt-2" style="overflow: hidden; text-overflow: ellipsis;">
+                                            <%# Eval("content") %>
                                         </div>
-                                        <small class="text-muted">最後更新：<%# Eval("UpdatedAt", "{0:yyyy-MM-dd HH:mm}") %>
-                                        </small>
+                                    </div>
+                                </div>
+                                <%--更新時間、編輯與刪除--%>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="mt-2 d-flex justify-content-between p-3">
+                                            <div>
+                                                <a href='<%# "EditCompany-B.aspx?id=" + Eval("Id") %>' class="btn btn-sm btn-success text-white me-1">編 輯</a>
+                                                <asp:LinkButton ID="btnDelete" runat="server"
+                                                    CommandName="Delete"
+                                                    CommandArgument='<%# Eval("Id") %>'
+                                                    CssClass="btn btn-sm btn-secondary"
+                                                    OnClientClick="return confirm('確定要刪除嗎？');">
+                                                刪 除
+                                                </asp:LinkButton>
+                                            </div>
+                                            <small class="text-muted">最後更新：<%# Eval("UpdatedAt", "{0:yyyy-MM-dd HH:mm}") %>
+                                            </small>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        
                     </div>
                 </ItemTemplate>
             </asp:Repeater>

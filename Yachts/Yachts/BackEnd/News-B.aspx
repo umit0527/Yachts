@@ -7,6 +7,10 @@
             color: white !important;
             border-color: #0dcaf0 !important;
         }
+
+        .article-content {
+            color: #000 !important; /* 全部字設為黑色 */
+        }
     </style>
     <div class="content-header">
         <div class="container-fluid">
@@ -24,57 +28,66 @@
             <asp:Repeater ID="Repeater1" runat="server" OnItemCommand="Repeater1_ItemCommand" OnItemDataBound="Repeater1_ItemDataBound">
                 <ItemTemplate>
                     <div class="card card-info card-outline mb-3">
-                        <div class="card-body">
-                            <div class="row mb-2">
-                                <div class="col-12">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <h5 class="card-title mb-1 fw-bold fs-4" title='<%# Eval("Title") %>' style="max-width: 70%; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
-                                            <%# Eval("Title") %>
-                                            <%# Convert.ToBoolean(Eval("Sticky")) ? "<span class='badge bg-danger ms-2'>置頂</span>" : "" %>
-                                        </h5>
-                                        <small class="text-muted">
-                                            <%# Eval("CategoryName") %> ｜ <%# Eval("CreatedAt", "{0:yyyy-MM-dd HH:mm}") %>
-                                        </small>
+                        <div class="position-relative p-3 d-flex justify-content-between align-items-center">
+                            <a
+                                href='<%# "#collapseNews" + Eval("Id") %>'
+                                data-bs-toggle="collapse"
+                                aria-expanded="false"
+                                aria-controls='<%# "collapseNews" + Eval("Id") %>'
+                                class="stretched-link d-block text-decoration-none text-dark">
+                                <h5 class="mb-0">
+                                    <%# Eval("Title") %>
+                                    <%# Convert.ToBoolean(Eval("Sticky")) ? "<span class='badge bg-danger ms-2'>置頂</span>" : "" %>
+                                </h5>
+                            </a>
+
+                            <small class="text-muted">
+                                <%# Eval("CategoryName") %> ｜ <%# Eval("CreatedAt", "{0:yyyy-MM-dd HH:mm}") %>
+                            </small>
+                        </div>
+                        <div id='<%# "collapseNews" + Eval("Id") %>' class="collapse">
+                            <div class="border-top"></div>
+                            <%--內容--%>
+                            <div class="row">
+                                <div class="col-12 article-content">
+                                    <div class="card-text p-3" style="overflow: hidden; text-overflow: ellipsis;">
+                                        <%# Eval("Content") %>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mb-2">
-                                <div class="col-12">
-                                    <p class="card-text pt-2 border-top" style="overflow: hidden; text-overflow: ellipsis;">
-                                        <%# Eval("Content") %>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row mb-2 ">
-                                <div class="col-6 border-top">
-                                    <p class="pt-2">封面：</p>
-                                    <img src='<%# "/Uploads/Photos/" + Eval("CoverPath") %>' alt="封面圖片" style="max-width: 300px; height: auto; border-radius: 8px;" />
+                            <div class="border-top"></div>
+                            <%--封面--%>
+                            <div class="row ">
+                                <div class="col-6 ">
+                                    <div class="px-3 pt-2">
+                                        <p class="fw-bold">封面：</p>
+                                        <img src='<%# "/Uploads/Photos/" + Eval("CoverPath") %>' alt="封面圖片" style="max-width: 300px; height: auto; border-radius: 8px;" />
+                                    </div>
                                 </div>
 
-                                <div class="col-6 border-top">
-                                    <asp:Repeater ID="rptDownloads" runat="server">
-                                        <HeaderTemplate>
-                                            <div class="pt-2 ">
-                                                <p>檔案下載：</p>
-                                                <ul style="list-style: none; padding-left: 0; margin-top: 0.5rem;">
-                                        </HeaderTemplate>
-                                        <ItemTemplate>
-                                            <li style="margin-bottom: 6px;">
-                                                <span style="display: inline-block; border-bottom: 1px solid #ccc; padding-bottom: 2px;">
-                                                    <%# System.IO.Path.GetFileName(Eval("FilePath").ToString()) %>
-                                                </span>
-                                            </li>
-                                        </ItemTemplate>
-                                        <FooterTemplate>
-                                            </ul>
-                                            </div>
-                                        </FooterTemplate>
-                                    </asp:Repeater>
+                                <div class="col-6">
+                                    <div class="px-3 pt-2">
+                                        <asp:Repeater ID="rptDownloads" runat="server">
+                                            <HeaderTemplate>
+                                                <p class="fw-bold">檔案下載：</p>
+                                            </HeaderTemplate>
+                                            <ItemTemplate>
+                                                <li style="margin-bottom: 6px;">
+                                                    <span style="display: inline-block; border-bottom: 1px solid #ccc; padding-bottom: 2px;">
+                                                        <%# System.IO.Path.GetFileName(Eval("FilePath").ToString()) %>
+                                                    </span>
+                                                </li>
+                                            </ItemTemplate>
+                                            <FooterTemplate>
+                                            </FooterTemplate>
+                                        </asp:Repeater>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row mb-2">
+                            <%--更新時間與編輯刪除--%>
+                            <div class="row">
                                 <div class="col-12">
-                                    <div class="mt-2 d-flex justify-content-between">
+                                    <div class="d-flex justify-content-between p-3">
                                         <div>
                                             <a href='<%# "EditNews-B.aspx?Id=" + Eval("Id") %>' class="btn btn-sm btn-info text-white me-1">編 輯</a>
                                             <asp:LinkButton ID="btnDelete" runat="server"
@@ -90,22 +103,26 @@
                                 </div>
                             </div>
                         </div>
+
+
+
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
-            <%--分頁--%>
-            <div class="text-center my-4">
-                <asp:Repeater ID="rptPagination" runat="server">
-                    <ItemTemplate>
-                        <a href='News-B.aspx?page=<%# Container.DataItem %>'
-                            class='<%# (Request.QueryString["page"] == Container.DataItem.ToString() ||
+        </div>
+        <%--分頁--%>
+        <div class="text-center my-4">
+            <asp:Repeater ID="rptPagination" runat="server">
+                <ItemTemplate>
+                    <a href='News-B.aspx?page=<%# Container.DataItem %>'
+                        class='<%# (Request.QueryString["page"] == Container.DataItem.ToString() ||
                                         (Request.QueryString["page"] == null && Convert.ToInt32(Container.DataItem) == 1))
                                         ? "btn btn-info mx-1 text-light" : "btn btn-outline-info mx-1 " %>'>
-                            <%# Container.DataItem %>
-                        </a>
-                    </ItemTemplate>
-                </asp:Repeater>
-            </div>
+                        <%# Container.DataItem %>
+                    </a>
+                </ItemTemplate>
+            </asp:Repeater>
         </div>
+
     </section>
 </asp:Content>

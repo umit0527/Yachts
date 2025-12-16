@@ -28,7 +28,7 @@ namespace Yachts.BackEnd
         {
             string sql = @"select Id, Name 
                            from NewsCategory 
-                           order by Name asc";
+                           order by Name desc";
 
             DataTable dt = db.SearchDB(sql);
 
@@ -81,6 +81,7 @@ namespace Yachts.BackEnd
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             string content = CKEditor1.Text.Trim();
+            content = content.Replace("src=\"Uploads/", "src=\"/Uploads/");
             string categoryList = CategoryList.SelectedValue;
             string title = txtTitle.Text.Trim();
             HttpFileCollection uploadedFiles = Request.Files;

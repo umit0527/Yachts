@@ -171,7 +171,7 @@ namespace Yachts.BackEnd
         {
             pnlInputFields.Visible = true;
         }
-        protected void btnAddField_Click(object sender, EventArgs e)   //欄位的編輯與刪除動作
+        protected void btnAddField_Click(object sender, EventArgs e)   //欄位與值的送出按鈕
         {
             var fields = ViewState["PendingFields"] as List<PrincipalField> ?? new List<PrincipalField>();
 

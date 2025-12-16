@@ -28,7 +28,7 @@ namespace Yachts
                 if (string.IsNullOrEmpty(modelId))
                 {
                     // 從資料庫查目前存在的最新一筆 Model 資料
-                    string sql = @"SELECT TOP 1 Id FROM Model ORDER BY Id desc";
+                    string sql = @"SELECT TOP 1 Id FROM Model ORDER BY Label desc , Id desc";
                     DataTable dt = db.SearchDB(sql);
 
                     if (dt.Rows.Count > 0)

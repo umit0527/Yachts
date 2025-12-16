@@ -19,7 +19,8 @@
                 </div>
                 <div class="card-body">
                     <div class="form-group mb-3"> 
-                        種類名稱：<asp:TextBox ID="CategoryName" runat="server" CssClass="form-control w-25"></asp:TextBox>
+                        <p class="fw-bold">
+                        種類名稱：</p><asp:TextBox ID="CategoryName" runat="server" CssClass="form-control w-25"></asp:TextBox>
                     </div>
                     <br /> 
                 </div>

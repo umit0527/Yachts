@@ -54,7 +54,7 @@
                 <!--------------------------------內容開始---------------------------------------------------->
                 <asp:Repeater ID="rptContent" runat="server">
                     <ItemTemplate>
-                        <div style=" padding:10px 0px; border-bottom-width: 1px; border-bottom-color: #CCCCCC; border-bottom-style: dashed; float: left;">
+                        <div style="width:100%; padding:10px 0px; border-bottom-width: 1px; border-bottom-color: #CCCCCC; border-bottom-style: dashed; float: left;">
                             <p><%# Eval("content") %></p>
                         </div>
                     </ItemTemplate>

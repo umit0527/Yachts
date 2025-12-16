@@ -18,7 +18,7 @@
                 <div class="card-body">
 
                     <div class="mb-3">
-                        <label for="CategoryName" class="form-label">種類名稱：</label>
+                        <label for="CategoryName" class="form-label fw-bold">種類名稱：</label>
                         <asp:TextBox ID="CategoryName" runat="server" CssClass="form-control" />
                     </div>
 
