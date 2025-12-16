@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 # Visual Studio
+=======
+# 忽略 Visual Studio 相關暫存檔
+>>>>>>> Pagination
 .vs/
 *.user
 *.suo
 
+<<<<<<< HEAD
 # Build output
 bin/
 obj/
@@ -15,3 +20,10 @@ packages/
 # Other
 *.log
 *.vsidx
+=======
+# Build 輸出
+bin/
+obj/
+*.dll
+*.pdb
+>>>>>>> Pagination
